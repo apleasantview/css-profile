@@ -1,0 +1,26 @@
+import baseline, {
+  config as baselineConfig,
+} from "@apleasantview/eleventy-plugin-baseline";
+
+const settings = {
+  title: "CSS",
+  url: process.env.URL,
+  defaultLanguage: "en",
+  head: {
+		link: [{ rel: 'stylesheet', href: '/assets/css/index.css' }],
+		meta: [{ name: 'color-scheme', content: 'light dark' }]
+	},
+  seo: {}
+};
+
+export default async function (eleventyConfig) {
+  await eleventyConfig.addPlugin(
+    baseline(settings, {
+      head: {
+        showGenerator: true,
+      },
+    }),
+  );
+}
+
+export const config = baselineConfig;
