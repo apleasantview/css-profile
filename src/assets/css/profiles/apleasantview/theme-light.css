@@ -1,0 +1,40 @@
+/* Light theme mapping (default + explicit) */
+:root {
+	color-scheme: light;
+
+	--color-background-default: var(--color-background-default-light);
+	--color-background-subtle: var(--color-background-subtle-light);
+	--color-text-primary: var(--color-text-primary-light);
+	--color-accent: var(--color-accent-light);
+	--color-text-muted: var(--color-text-muted-light);
+	--color-border-default: var(--color-border-default-light);
+	--color-border-strong: var(--color-border-strong-light);
+	--color-surface-hover: var(--color-surface-hover-light);
+
+	--distance-glitch-red-negative: -0.5em;
+	--distance-glitch-red-positive: 0.5em;
+	--distance-glitch-green-negative: -0.5em;
+	--distance-glitch-green-positive: 0.5em;
+	--distance-glitch-blue-negative: -0.5em;
+	--distance-glitch-blue-positive: 0.5em;
+}
+
+:root[data-theme='light'] {
+	color-scheme: light;
+
+	--color-background-default: var(--color-background-default-light);
+	--color-background-subtle: var(--color-background-subtle-light);
+	--color-text-primary: var(--color-text-primary-light);
+	--color-accent: var(--color-accent-light);
+	--color-text-muted: var(--color-text-muted-light);
+	--color-border-default: var(--color-border-default-light);
+	--color-border-strong: var(--color-border-strong-light);
+	--color-surface-hover: var(--color-surface-hover-light);
+
+	--distance-glitch-red-negative: -0.5em;
+	--distance-glitch-red-positive: 0.5em;
+	--distance-glitch-green-negative: -0.5em;
+	--distance-glitch-green-positive: 0.5em;
+	--distance-glitch-blue-negative: -0.5em;
+	--distance-glitch-blue-positive: 0.5em;
+}
