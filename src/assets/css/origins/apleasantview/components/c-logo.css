@@ -1,0 +1,13 @@
+.c-logo--header {
+	max-width: fit-content;
+}
+
+a.c-logo__link {
+	display: block;
+	color: var(--color-text-primary);
+	border: none;
+}
+
+a.c-logo__link:hover {
+	background: none;
+}
