@@ -1,9 +1,14 @@
 /* 00. Origins */
-@import 'origins/apleasantview/apleasantview.css' layer(apv);
-@import 'origins/baseline/baseline.css' layer(baseline);
-@import 'origins/document/document.css' layer(document);
+/* @import 'origins/apleasantview/apleasantview.css' layer(apv); */
+/* @import 'origins/baseline/baseline.css' layer(baseline); */
+/* @import 'origins/document/document.css' layer(document); */
 
 /* 01. Settings */
+@import './settings/colors.css';
+@import './settings/typography.css';
+@import './settings/spacing.css';
+@import './settings/borders.css';
+
 /* 02. Profiles */
 /* 03. Tools */
 /* 04. Generic */
