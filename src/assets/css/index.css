@@ -1,3 +1,21 @@
+/* 00. Origins */
 @import 'origins/apleasantview/apleasantview.css' layer(apv);
 @import 'origins/baseline/baseline.css' layer(baseline);
 @import 'origins/document/document.css' layer(document);
+
+/* 01. Settings */
+/* 02. Themes */
+/* 03. Tools */
+/* 04. Generic */
+/* 05. Elements */
+/* 06. Blocks */
+/* 07. Objects */
+/* 08. Layouts */
+/* 09. Components */
+/* 10. Utilities */
+/* 11. Vendors */
+
+/* CSS is organised followng ITCSS and BEMIT naming conventions, see:
+* @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+* @link https://benmarshall.me/itcss/
+*/
