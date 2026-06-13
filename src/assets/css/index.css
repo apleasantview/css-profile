@@ -1,12 +1,19 @@
 /* 01. Settings */
-@import './settings/colors.css';
-@import './settings/typography.css';
-@import './settings/spacing.css';
-@import './settings/borders.css';
-
 /* 02. Tools */
+@import './tools/profile.css';
 /* 03. Generic */
+@import './generic/modern-reset.css';
+@import './generic/forms.css';
+@import './generic/skip-link.css';
+@import './generic/sr-only.css';
 /* 04. Elements */
+@import './elements/base.css';
+@import './elements/headings.css';
+@import './elements/p.css';
+@import './elements/a.css';
+@import './elements/lists.css';
+@import './elements/code.css';
+@import './elements/hr.css';
 /* 05. Blocks */
 /* 06. Objects */
 /* 07. Layouts */

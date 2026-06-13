@@ -1,0 +1,14 @@
+/* Profile: Primitives → Semantics → Themes */
+
+/* Primitives */
+@import '../settings/primitives/colors.css';
+@import '../settings/primitives/typography.css';
+@import '../settings/primitives/spacing.css';
+@import '../settings/primitives/borders.css';
+
+/* Semantics */
+@import '../settings/semantic.css';
+
+/* Themes */
+@import './themes/light.css';
+@import './themes/dark.css';
