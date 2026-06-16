@@ -1,27 +1,24 @@
-/* 01. Settings — the profile: primitives → semantic → themes (assembled in profile/profile.css) */
+/* 01. Settings — the profile: primitives → semantic → themes → accessibility (assembled in profile/profile.css) */
 @import './profile/profile.css';
 /* 02. Tools — none; vanilla CSS has no mixins/functions to put here */
-/* 03. Generic */
-/* @import './render/generic/modern-reset.css'; */
-/* @import './render/generic/forms.css'; */
-/* @import './render/generic/skip-link.css'; */
-/* @import './render/generic/sr-only.css'; */
+/* 03. Generic — resets (the accessibility floor is assembled inside the profile) */
+/* @import './document/generic/modern-reset.css'; */
+/* @import './document/generic/forms.css'; */
 /* 04. Elements */
-/* @import './render/elements/base.css';
-@import './render/elements/headings.css';
-@import './render/elements/p.css';
-@import './render/elements/a.css';
-@import './render/elements/lists.css';
-@import './render/elements/code.css';
-@import './render/elements/hr.css'; */
-/* 05. Blocks */
-/* 06. Objects */
-/* 07. Layouts */
-/* 08. Components */
-/* 09. Utilities */
-/* @import './render/utilities/u-flow.css'; */
+/* @import './document/elements/base.css';
+@import './document/elements/headings.css';
+@import './document/elements/p.css';
+@import './document/elements/a.css';
+@import './document/elements/lists.css';
+@import './document/elements/code.css';
+@import './document/elements/hr.css'; */
+/* 05. Objects */
+/* 06. Layouts */
+/* 07. Components */
+/* 08. Utilities */
+/* @import './utilities/u-flow.css'; */
 
-/* 10. Vendors */
+/* 09. Vendors */
 
 /* CSS is organised followng ITCSS and BEMIT naming conventions, see:
 * @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/

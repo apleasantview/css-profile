@@ -1,4 +1,4 @@
-/* Profile: Primitives → Semantics → Themes */
+/* Profile: Primitives → Semantics → Themes → Accessibility */
 
 /* Primitives */
 @import './primitives/colors.css';
@@ -21,3 +21,8 @@
 @import './themes/dark.css';
 @import './themes/contrast.css';
 @import './themes/forced-colors.css';
+
+/* Accessibility — the non-negotiable floor (skip-link, screen-reader-only).
+ * Shared across presentations and always on, so it's part of the profile. */
+@import './accessibility/skip-link.css';
+@import './accessibility/sr-only.css';
