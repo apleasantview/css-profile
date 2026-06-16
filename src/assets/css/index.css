@@ -2,24 +2,24 @@
 @import './profile/profile.css';
 /* 02. Tools — none; vanilla CSS has no mixins/functions to put here */
 /* 03. Generic */
-/* @import './generic/modern-reset.css'; */
-/* @import './generic/forms.css'; */
-/* @import './generic/skip-link.css'; */
-/* @import './generic/sr-only.css'; */
+/* @import './render/generic/modern-reset.css'; */
+/* @import './render/generic/forms.css'; */
+/* @import './render/generic/skip-link.css'; */
+/* @import './render/generic/sr-only.css'; */
 /* 04. Elements */
-/* @import './elements/base.css';
-@import './elements/headings.css';
-@import './elements/p.css';
-@import './elements/a.css';
-@import './elements/lists.css';
-@import './elements/code.css';
-@import './elements/hr.css'; */
+/* @import './render/elements/base.css';
+@import './render/elements/headings.css';
+@import './render/elements/p.css';
+@import './render/elements/a.css';
+@import './render/elements/lists.css';
+@import './render/elements/code.css';
+@import './render/elements/hr.css'; */
 /* 05. Blocks */
 /* 06. Objects */
 /* 07. Layouts */
 /* 08. Components */
 /* 09. Utilities */
-/* @import './utilities/u-flow.css'; */
+/* @import './render/utilities/u-flow.css'; */
 
 /* 10. Vendors */
 
