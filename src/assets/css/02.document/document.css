@@ -1,0 +1,22 @@
+/* Document — presentation #1 (prose). Assembles this presentation's render
+ * layers in cascade order, consuming the shared vocabulary in 01.profile/.
+ * Imports stay commented until the base build authors the tags in our roles. */
+
+/* Generic — resets */
+/* @import './generic/modern-reset.css'; */
+/* @import './generic/forms.css'; */
+
+/* Elements — bare-tag styling */
+/* @import './elements/base.css'; */
+/* @import './elements/headings.css'; */
+/* @import './elements/p.css'; */
+/* @import './elements/a.css'; */
+/* @import './elements/lists.css'; */
+/* @import './elements/code.css'; */
+/* @import './elements/hr.css'; */
+
+/* Objects */
+
+/* Layouts */
+
+/* Blocks */

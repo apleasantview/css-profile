@@ -1,26 +1,22 @@
-/* 01. Settings — the profile: primitives → semantic → themes → accessibility (assembled in profile/profile.css) */
-@import './profile/profile.css';
-/* 02. Tools — none; vanilla CSS has no mixins/functions to put here */
-/* 03. Generic — resets (the accessibility floor is assembled inside the profile) */
-/* @import './document/generic/modern-reset.css'; */
-/* @import './document/generic/forms.css'; */
-/* 04. Elements */
-/* @import './document/elements/base.css';
-@import './document/elements/headings.css';
-@import './document/elements/p.css';
-@import './document/elements/a.css';
-@import './document/elements/lists.css';
-@import './document/elements/code.css';
-@import './document/elements/hr.css'; */
-/* 05. Objects */
-/* 06. Layouts */
-/* 07. Components */
-/* 08. Utilities */
-/* @import './utilities/u-flow.css'; */
+/* Entry point. Import order = cascade order; the numbered folders make that
+ * order visible on disk. Each profile/presentation is bundled by its own
+ * assembler (profile.css, document.css); this file just sequences them.
+ * No Tools layer — vanilla CSS has no mixins/functions to put there.
+ * Organised following ITCSS and BEMIT — see links below. */
 
-/* 09. Vendors */
+/* 01. Profile — shared vocabulary + a11y floor (primitives → semantic → themes → accessibility) */
+@import './01.profile/profile.css';
 
-/* CSS is organised followng ITCSS and BEMIT naming conventions, see:
-* @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
-* @link https://benmarshall.me/itcss/
-*/
+/* 02. Document — presentation #1: generic → elements → objects → layouts → blocks */
+@import './02.document/document.css';
+
+/* 03. Components — shared UI (built from the vocabulary) */
+@import './03.components/components.css';
+
+/* 04. Utilities */
+@import './04.utilities/utilities.css';
+
+/* 05. Vendors — third-party CSS, dropped in as-is (no assembler) */
+
+/* @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ * @link https://benmarshall.me/itcss/ */
