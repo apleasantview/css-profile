@@ -1,24 +1,26 @@
-/* 01. Settings */
-/* 02. Tools */
-@import './tools/profile.css';
+/* 01. Settings — the profile: primitives → semantic → themes (assembled in profile/profile.css) */
+@import './profile/profile.css';
+/* 02. Tools — none; vanilla CSS has no mixins/functions to put here */
 /* 03. Generic */
-@import './generic/modern-reset.css';
-@import './generic/forms.css';
-@import './generic/skip-link.css';
-@import './generic/sr-only.css';
+/* @import './generic/modern-reset.css'; */
+/* @import './generic/forms.css'; */
+/* @import './generic/skip-link.css'; */
+/* @import './generic/sr-only.css'; */
 /* 04. Elements */
-@import './elements/base.css';
+/* @import './elements/base.css';
 @import './elements/headings.css';
 @import './elements/p.css';
 @import './elements/a.css';
 @import './elements/lists.css';
 @import './elements/code.css';
-@import './elements/hr.css';
+@import './elements/hr.css'; */
 /* 05. Blocks */
 /* 06. Objects */
 /* 07. Layouts */
 /* 08. Components */
 /* 09. Utilities */
+/* @import './utilities/u-flow.css'; */
+
 /* 10. Vendors */
 
 /* CSS is organised followng ITCSS and BEMIT naming conventions, see:

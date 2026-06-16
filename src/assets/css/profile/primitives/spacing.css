@@ -1,0 +1,23 @@
+:root {
+	/* Spacing scale. Numbers are the rhythm (n = px ÷ 4 — the name is the size);
+	 * names are the edges (the floor and the non-scaling hairline). Numeric gaps
+	 * (9–11, 13–15…) are honest — fill on demand. Roles in semantic.css translate
+	 * t-shirt → number, so the role layer does real work, not a rename. */
+
+	/* Named edges — outside the rhythm */
+	--space-void: 0; /* deliberate absence, not a forgotten 0 */
+	--space-hairline: 1px; /* device pixel — doesn't scale with rem */
+
+	/* Rhythm */
+	--space-1: 0.25rem; /* 4px */
+	--space-2: 0.5rem; /* 8px */
+	--space-3: 0.75rem; /* 12px */
+	--space-4: 1rem; /* 16px */
+	--space-5: 1.25rem; /* 20px */
+	--space-6: 1.5rem; /* 24px */
+	--space-7: 1.75rem; /* 28px */
+	--space-8: 2rem; /* 32px */
+	--space-12: 3rem; /* 48px */
+	--space-16: 4rem; /* 64px */
+	--space-32: 8rem; /* 128px — page sections / hero */
+}

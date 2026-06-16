@@ -1,0 +1,17 @@
+/* Profile: Primitives → Semantics → Themes */
+
+/* Primitives */
+@import './primitives/colors.css';
+@import './primitives/typography.css';
+@import './primitives/spacing.css';
+@import './primitives/borders.css';
+
+/* Semantics */
+@import './semantic.css';
+
+/* Themes (deviations from the base declared in semantic.css).
+ * Order = precedence: dark, then authored high-contrast, then the OS's
+ * forced-colors palette last (most authoritative when active). */
+@import './themes/dark.css';
+@import './themes/contrast.css';
+@import './themes/forced-colors.css';

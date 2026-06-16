@@ -1,5 +1,5 @@
 a {
-	color: var(--color-text-primary);
+	color: var(--color-text);
 	text-decoration: none;
 	/* text-decoration-thickness: var(--link-underline-thickness); */
 	/* text-underline-offset: var(--link-underline-offset); */
@@ -8,12 +8,8 @@ a {
 	padding-inline: 0.15em;
 }
 
-a:visited {
-	color: var(--tt-color-link-visited);
-}
-
 a:hover {
 	background-color: var(--color-surface-hover);
 	border-bottom-color: transparent;
-	border-radius: 4px;
+	border-radius: var(--border-radius-control);
 }

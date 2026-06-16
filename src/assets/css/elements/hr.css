@@ -1,5 +1,5 @@
 /* Horizontal rule */
 hr {
 	border: none;
-	border-top: 1px solid transparent;
+	border-top: var(--border-width-default) solid transparent;
 }

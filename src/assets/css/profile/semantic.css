@@ -1,0 +1,153 @@
+/* Semantic tier tokens.
+ * Tier 1 foundations live in ./primitives (raw scales: colour, type, space, border).
+ * Tier 2 (this file) maps foundations to application-level roles.
+ * Color roles declare a base reality (light); themes override per theme.
+ * Inspired by Brad Frost's themeable design systems approach.
+ * @link https://bradfrost.com/blog/post/creating-themeable-design-systems/
+ */
+
+:root {
+	/* Color roles — base reality (light).
+	 * The overridable surface: themes override these per theme.
+	 * Light is the base; dark.css supplies the deviations. Flip to go dark-first.
+	 * Roles follow Radix's 12-step jobs — named instead of numbered.
+	 */
+	color-scheme: light;
+
+	/* Neutral family — chrome (Radix neutral 1–12) */
+	--color-background: var(--color-white); /* 1  app background */
+	--color-background-subtle: var(--color-neutral-50); /* 2  subtle background */
+
+	--color-surface: var(--color-neutral-100); /* 3  element background */
+	--color-surface-hover: var(--color-neutral-200); /* 4  hovered element */
+	--color-surface-active: var(--color-neutral-300); /* 5  active / selected */
+
+	--color-border-subtle: var(--color-neutral-200); /* 6  separator / hairline */
+	--color-border: var(--color-neutral-300); /* 7  border, focus ring */
+	--color-border-hover: var(--color-neutral-400); /* 8  hovered border */
+
+	--color-solid: var(--color-neutral-900); /* 9  neutral solid */
+	--color-solid-hover: var(--color-neutral-800); /* 10 hovered solid */
+	--color-on-solid: var(--color-white); /* –  text / icon on the neutral fill */
+
+	--color-text-muted: var(--color-neutral-500); /* 11 low-contrast text */
+	--color-text: var(--color-neutral-900); /* 12 high-contrast text */
+
+	/* Accent family — emphasis / brand (Radix accent 1–12) */
+	--color-accent-surface: var(--color-blue-50); /* 3  tinted background */
+	--color-accent-surface-hover: var(--color-blue-100); /* 4  hovered tinted bg */
+
+	--color-accent-border: var(--color-blue-500); /* 7  accent border, focus ring */
+
+	--color-accent-solid: var(--color-blue-600); /* 9  brand fill — buttons, links */
+	--color-accent-solid-hover: var(--color-blue-700); /* 10 hovered fill */
+	--color-accent-on-solid: var(--color-white); /* –  text / icon on the fill */
+
+	--color-accent-text: var(--color-blue-700); /* 11 accent-coloured text */
+
+	/* Status families — convention (hue → meaning) over the green/amber/red/blue
+	 * lexicon. Same shape as accent (surface, border, text, solid, on-solid).
+	 * Never the sole signal — pair with an icon or word (see color-accessibility). */
+	--color-success-surface: var(--color-green-50);
+	--color-success-border: var(--color-green-400);
+	--color-success-text: var(--color-green-700);
+	--color-success-solid: var(--color-green-600);
+	--color-success-on-solid: var(--color-white);
+
+	--color-warning-surface: var(--color-amber-50);
+	--color-warning-border: var(--color-amber-400);
+	--color-warning-text: var(--color-amber-700);
+	--color-warning-solid: var(--color-amber-500);
+	--color-warning-on-solid: var(--color-neutral-950); /* amber too light for white */
+
+	--color-danger-surface: var(--color-red-50);
+	--color-danger-border: var(--color-red-400);
+	--color-danger-text: var(--color-red-700);
+	--color-danger-solid: var(--color-red-600);
+	--color-danger-on-solid: var(--color-white);
+
+	--color-info-surface: var(--color-blue-50);
+	--color-info-border: var(--color-blue-400);
+	--color-info-text: var(--color-blue-700);
+	--color-info-solid: var(--color-blue-600);
+	--color-info-on-solid: var(--color-white);
+
+	/* Typography roles */
+	--font-family-body: var(--font-family-sans);
+	--font-family-heading: var(--font-family-sans);
+	--font-family-code: var(--font-family-mono);
+
+	--text-size-body: var(--font-size-0);
+	--text-size-secondary: var(--font-size--1);
+	--text-size-muted: var(--font-size--2);
+	--text-size-lede: var(--font-size-1);
+	--text-size-title: var(--font-size-2);
+	--text-size-display: var(--font-size-4);
+	--text-size-code: var(--font-size--1);
+
+	/* Line-height — a decision per use, same shape as letter-spacing (its sibling).
+	 * Body breathes (normal); headings sit tight; code matches body for now. The
+	 * loose primitive stays in the lexicon for when a role reaches for it. */
+	--text-lineheight-body: var(--line-height-normal);
+	--text-lineheight-heading: var(--line-height-tight);
+	--text-lineheight-code: var(--line-height-normal);
+
+	/* Weight has no role layer: the primitives (light/normal/medium/semibold/bold)
+	 * are already the application keywords, so a role would only rename them.
+	 * Elements consume --font-weight-* directly until a weight bears real meaning. */
+
+	/* Tracking is a decision per use, even when two uses land on the same value —
+	 * body and heading could diverge tomorrow, the way font-family-heading can. */
+	--text-letterspacing-body: var(--letter-spacing-wide);
+	--text-letterspacing-heading: var(--letter-spacing-wide);
+
+	--text-inlinesize-body: 75ch;
+	--text-inlinesize-heading: fit-content;
+
+	/* Link roles */
+	--link-underline-thickness: 0.05em;
+	--link-underline-offset: 0.2em;
+
+	/* Border roles */
+	--border-width-default: var(--border-width-1); /* standard hairline border */
+
+	/* Radius by use: inline controls round less than blocks. Both could diverge. */
+	--border-radius-control: var(--border-radius-sm); /* code, kbd, link hover */
+	--border-radius-card: var(--border-radius-md); /* pre, details, cards */
+
+	/* Outline / focus ring roles */
+	--focus-ring-width: var(--border-width-1);
+	--focus-ring-offset: 0.12em;
+
+	/* Spacing roles */
+	/* Padding blocks (inset) for containers */
+	--space-inset-3xs: var(--space-1);
+	--space-inset-2xs: var(--space-2);
+	--space-inset-xs: var(--space-3);
+	--space-inset-s: var(--space-4);
+	--space-inset-m: var(--space-5);
+	--space-inset-l: var(--space-6);
+	--space-inset-xl: var(--space-7);
+	--space-inset-2xl: var(--space-8);
+
+	/* Gap between items in a row or wrapping cluster — the CSS `gap` property.
+	 * (Sibling axes: `inset` padding inside a container; `flow` vertical rhythm
+	 * between prose, below.) */
+	--space-gap-xs: var(--space-2);
+	--space-gap-s: var(--space-3);
+	--space-gap-m: var(--space-4);
+	--space-gap-l: var(--space-5);
+
+	/* Flow (vertical rhythm between flowing elements).
+	 * em-based so it scales with local text; defined directly — no rem primitive
+	 * maps to it, and a 1:1 rename earns no layer. Trimmed to what's in use. */
+	--flow-space-2xs: 0.5em;
+	--flow-space-s: 1em;
+	--flow-space-m: 1.25em;
+	--flow-space-xl: 1.75em;
+
+	/* Wrapper utility */
+	--wrapper-max-width: 105rem;
+	--wrapper-margin-inline: auto;
+	--wrapper-padding-inline: var(--space-7);
+}
