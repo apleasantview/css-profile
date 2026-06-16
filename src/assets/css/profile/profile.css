@@ -6,8 +6,14 @@
 @import './primitives/spacing.css';
 @import './primitives/borders.css';
 
-/* Semantics */
-@import './semantic.css';
+/* Semantics — map foundations to application-level roles, one file per axis
+ * mirroring primitives/. Colour roles declare a base reality (light) that themes
+ * override; the other axes are theme-stable. (Brad Frost's themeable systems.)
+ * @link https://bradfrost.com/blog/post/creating-themeable-design-systems/ */
+@import './semantic/colors.css';
+@import './semantic/typography.css';
+@import './semantic/spacing.css';
+@import './semantic/borders.css';
 
 /* Themes (deviations from the base declared in semantic.css).
  * Order = precedence: dark, then authored high-contrast, then the OS's
