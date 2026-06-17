@@ -1,5 +1,5 @@
 ---
-title: 'layered-css'
+title: 'CSS Profile'
 slug: 'home'
 description: 'An inquiry into the web document — what is left when everything accumulated is taken away.'
 date: 2026-05-29
@@ -75,4 +75,4 @@ With thanks to Tim Berners-Lee, Håkon Wium Lie and Bert Bos, John Allsopp, John
 
 ---
 
-<span class="doc-label">CSS · a pleasant view · 2026 · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+<span class="label">CSS · a pleasant view · 2026 · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>

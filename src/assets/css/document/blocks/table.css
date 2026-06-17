@@ -1,0 +1,23 @@
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+caption {
+	caption-side: bottom;
+	padding-block: 0.5em;
+	color: var(--color-text-muted);
+	font-size: 0.925em;
+}
+
+th,
+td {
+	border: var(--border-width-default) solid var(--color-border);
+	padding: 0.5em 0.75em;
+	vertical-align: top;
+}
+
+th {
+	text-align: left;
+	background: var(--color-background-subtle);
+}

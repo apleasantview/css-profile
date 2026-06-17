@@ -23,26 +23,28 @@ lang: en
         margin-top: 3rem;
       }
 
-      section > * + * {
-        margin-top: var(--flow-space);
+      section > * + *, header > * + * {
+        margin-top: var(--flow-space-s);
       }
     </style>
   </head>
   <body>
     <main>
       <header>
+        <h1>{{ settings.title }} - Theme test</h1>
         <div class="breadcrumbs">
           <a href="/">home</a> / theme test
         </div>
-        <h1>Theme test</h1>
-        <p>
-          This page exercises common HTML elements to validate a
-          reusable, standalone defaults stylesheet.
-        </p>
-        <p>
-          Here is a <a href="#links">regular link</a>, a <a href="#links">second link</a> (hover/focus), and a
-          <a href="https://example.com">visited link example</a> (after you click it).
-        </p>
+        <div class="whut">
+          <p>
+            This page exercises common HTML elements to validate a
+            reusable, standalone defaults stylesheet.
+          </p>
+          <p>
+            Here is a <a href="#links">regular link</a>, a <a href="#links">second link</a> (hover/focus), and a
+            <a href="https://example.com">visited link example</a> (after you click it).
+          </p>
+        </div>
       </header>
 
       <section aria-labelledby="typography">

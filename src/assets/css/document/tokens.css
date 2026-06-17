@@ -1,0 +1,37 @@
+/* Document tokens. This presentation's own custom properties, laid over the
+ * profile vocabulary: what belongs to this document and no other. The seam where
+ * a presentation talks back. Override a role, add a primitive the profile
+ * doesn't ship, compose a local rhythm. */
+
+:root {
+	/* Colour */
+	--color-bg: #f5f4f0;
+	--color-text: #141414;
+	--color-text-muted: #6b6b68;
+	--color-rule: #d4d3ce;
+	--color-accent: #141414;
+
+	/* Voices */
+	--font-body: ui-serif, Georgia, "Times New Roman", serif;
+	--font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+	/* Type scale */
+	--text-base: clamp(1rem, 1.5vw, 1.125rem);
+	--text-h1: clamp(1.75rem, 4vw, 2.5rem);
+	--text-h2: 1rem;
+	--text-code: 0.85em;
+	--text-mono: 0.75rem;
+	--text-label: 0.7rem;
+	--leading: 1.65;
+	--leading-tight: 1.2;
+
+	/* Spacing */
+	--space-xs: 0.5rem;
+	--space-s: 1rem;
+	--space-m: 2rem;
+	--space-l: 4rem;
+	--space-xl: 8rem;
+
+	/* Measure */
+	--measure: 62ch;
+}

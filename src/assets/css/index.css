@@ -1,24 +1,22 @@
 /* Entry point. Import order = cascade order; the numbered folders make that
- * order visible on disk. Each profile/presentation is bundled by its own
- * assembler (profile.css, document.css); this file just sequences them.
- * No Tools layer — vanilla CSS has no mixins/functions to put there.
- * Organised following ITCSS and BEMIT — see links below. */
+ * order visible on disk. The profile assembles itself (it's the package); the
+ * consumer presentations are sequenced here, so the whole cascade reads in one
+ * pass. No Tools layer — vanilla CSS has no mixins/functions.*/
 
 /* 01. Profile — shared vocabulary + a11y floor (primitives → semantic → themes → accessibility) */
-@import './01.profile/profile.css';
+@import './profile/profile.css';
 
-/* 02. Document — presentation #1: generic → elements → objects → layouts → blocks */
-@import './02.document/document.css';
+/* 02. Document — presentation / tokens → base → blocks → layouts → utilities */
+@import './document/tokens.css';
+@import './document/base.css';
+@import './document/blocks/table.css';
+@import './document/blocks/lists.css';
+@import './document/blocks/details.css';
+@import './document/utilities/flow.css';
+@import './document/utilities/label.css';
 
 /* 03. Components — shared UI (built from the vocabulary) */
-@import './03.components/components.css';
 
-/* 04. Utilities */
-@import './04.utilities/utilities.css';
-
-/* 05. Vendors — third-party CSS, dropped in as-is (no assembler). Last by
+/* 04. Vendors — third-party CSS, dropped in as-is (no assembler). Last by
  * design: an enhancement, not a foundation — nothing depends on it, so it lands
  * after everything authored. Admitted, not assumed. */
-
-/* @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
- * @link https://benmarshall.me/itcss/ */
