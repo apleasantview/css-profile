@@ -16,6 +16,7 @@ body {
 	line-height: var(--text-lineheight-body);
 	color: var(--color-text);
 	background-color: var(--color-background);
+	transition: background-color 0.2s, color 0.2s;
 	overflow-wrap: break-word;
 }
 
@@ -41,35 +42,34 @@ footer {
 	margin-inline: auto;
 }
 
-/* Headings */
+/* Headings. The editorial treatment: light weight throughout, h1 tracked tight,
+ * h2 a small uppercase muted label. h1/h2 tracking diverges (opposite signs), so
+ * it's set per element from the primitive lexicon — the single heading-tracking
+ * role is too coarse for this presentation. */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	--flow-space: var(--flow-space-m);
 	line-height: var(--text-lineheight-heading);
-	letter-spacing: var(--text-letterspacing-heading);
+	font-weight: var(--font-weight-normal);
 }
 
 h1 {
 	font-size: var(--text-size-display);
-	font-weight: var(--font-weight-medium);
-}
-
-h1 + * {
-	--flow-space: var(--flow-space-xl);
+	letter-spacing: var(--letter-spacing-tight);
 }
 
 h2 {
-	font-size: var(--text-size-title);
-	font-weight: var(--font-weight-medium);
+	font-size: var(--text-size-eyebrow);
+	letter-spacing: var(--letter-spacing-wider);
+	text-transform: uppercase;
+	color: var(--color-text-muted);
 }
 
 h3 {
 	font-size: var(--text-size-body);
-	font-weight: var(--font-weight-medium);
 }
 
 /* Text */
@@ -119,18 +119,15 @@ sub {
 /* Links */
 a {
 	color: var(--color-text);
-	text-decoration: none;
-	/* text-decoration-thickness: var(--link-underline-thickness); */
-	/* text-underline-offset: var(--link-underline-offset); */
-	border-bottom: var(--link-underline-thickness) solid currentColor;
-	transition: all 0.3s ease-out;
-	padding-inline: 0.15em;
+	text-decoration: underline;
+	text-decoration-color: var(--color-border);
+	text-decoration-thickness: var(--link-underline-thickness);
+	text-underline-offset: var(--link-underline-offset);
+	transition: text-decoration-color 0.15s ease-out;
 }
 
 a:hover {
-	background-color: var(--color-surface-hover);
-	border-bottom-color: transparent;
-	border-radius: var(--border-radius-control);
+	text-decoration-color: currentColor;
 }
 
 /* Code */
@@ -142,7 +139,6 @@ code {
 	padding: 0.15em 0.35em;
 	border-radius: var(--border-radius-control);
 	background: var(--color-background-subtle);
-	vertical-align: center;
 }
 
 kbd,
@@ -178,8 +174,9 @@ kbd {
 
 /* Blockquote */
 blockquote {
-	padding: 1em 0 1em 2em;
+	padding: var(--space-s) 0 var(--space-s) var(--space-m);
 	border-inline-start: var(--border-width-default) solid var(--color-border);
+	color: var(--color-text-muted);
 	font-style: italic;
 }
 
@@ -206,17 +203,16 @@ figcaption {
 /* Rules */
 hr {
 	border: none;
-	border-top: var(--border-width-default) solid transparent;
+	border-top: var(--border-width-default) solid var(--color-border);
 }
 
-/* Block elements share the flow rhythm and the measure */
+/* Block elements capped to the measure (vertical rhythm comes from .flow) */
 dl,
 blockquote,
 pre,
 table,
 figure,
 hr {
-	margin-block: var(--flow-space);
 	max-inline-size: var(--text-inlinesize-body);
 }
 
