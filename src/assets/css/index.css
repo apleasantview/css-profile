@@ -16,7 +16,9 @@
 /* 04. Utilities */
 @import './04.utilities/utilities.css';
 
-/* 05. Vendors — third-party CSS, dropped in as-is (no assembler) */
+/* 05. Vendors — third-party CSS, dropped in as-is (no assembler). Last by
+ * design: an enhancement, not a foundation — nothing depends on it, so it lands
+ * after everything authored. Admitted, not assumed. */
 
 /* @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
  * @link https://benmarshall.me/itcss/ */
