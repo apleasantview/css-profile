@@ -1,5 +1,5 @@
 :root {
-	/* Font stacks (system fonts — no external requests) */
+	/* Font stacks (system fonts, no external requests) */
 	--font-family-sans:	system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 	--font-family-mono:	ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
@@ -27,8 +27,8 @@
 	--line-height-normal: 1.5;
 	--line-height-loose: 1.6;
 
-	/* Letter spacing (tracking) — magnitude lexicon; the roles pick the use.
-	 * Named by how open the tracking is, not by who uses it (that's the role's job). */
+	/* Letter spacing (tracking). Named by how open it is, not by who uses it;
+	 * the role layer picks the use. */
 	--letter-spacing-tight: -0.02em;
 	--letter-spacing-normal: 0;
 	--letter-spacing-wide: 0.02em;

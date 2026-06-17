@@ -1,8 +1,7 @@
-/* Dark theme — deviations from the base declared in ../semantic.css.
+/* Dark theme. Deviations from the base reality in ../semantic/colors.css.
  * Applies when the OS prefers dark and no explicit choice is set,
  * or when [data-theme='dark'] is set on the root.
- * Same role contract as the base — only the primitive mappings change.
- */
+ * Same role contract as the base; only the primitive mappings change. */
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme='light']) {
 		color-scheme: dark;

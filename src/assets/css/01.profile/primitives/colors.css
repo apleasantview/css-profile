@@ -3,7 +3,7 @@
 	--color-black: #000000;
 	--color-white: #ffffff;
 
-	/* Neutral ramp — Tailwind v4 "neutral" (oklch, zero-hue; 50 lightest → 950 darkest) */
+	/* Neutral ramp. Tailwind v4 "neutral" (oklch, zero-hue; 50 lightest → 950 darkest) */
 	--color-neutral-50: oklch(98.5% 0 0);
 	--color-neutral-100: oklch(97% 0 0);
 	--color-neutral-200: oklch(92.2% 0 0);
@@ -16,7 +16,7 @@
 	--color-neutral-900: oklch(20.5% 0 0);
 	--color-neutral-950: oklch(14.5% 0 0);
 
-	/* Accent ramp — Tailwind v4 "blue" (oklch; the themeable accent; re-point to rebrand) */
+	/* Accent ramp. Tailwind v4 "blue" (oklch; the themeable accent, re-point to rebrand) */
 	--color-blue-50: oklch(97% 0.014 254.604);
 	--color-blue-100: oklch(93.2% 0.032 255.585);
 	--color-blue-200: oklch(88.2% 0.059 254.128);
@@ -29,7 +29,7 @@
 	--color-blue-900: oklch(37.9% 0.146 265.522);
 	--color-blue-950: oklch(28.2% 0.091 267.935);
 
-	/* Status ramps — Tailwind v4 (oklch). Hues for the success/warning/danger
+	/* Status ramps. Tailwind v4 (oklch). Hues for the success/warning/danger
 	 * convention; info reuses blue. The meaning is assigned in the semantic layer. */
 	--color-green-50: oklch(98.2% 0.018 155.826);
 	--color-green-100: oklch(96.2% 0.044 156.743);

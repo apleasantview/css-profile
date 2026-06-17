@@ -1,11 +1,10 @@
-/* High-contrast theme — authored, for users who ask for more contrast.
+/* High-contrast theme, authored, for users who ask for more contrast.
  * Triggered by `prefers-contrast: more`. It layers on top of light OR dark,
  * so it cranks the contrast-critical roles in both directions: darker text and
  * stronger borders on light, lighter text and stronger borders on dark.
  * Distinct from forced-colors.css (that's the OS's own high-contrast palette).
  * Imported after dark.css so it wins; roles not listed keep their theme value.
- * Step choices are tuneable — verify against a contrast checker when it matters.
- */
+ * Step choices are tuneable; verify against a contrast checker when it matters. */
 @media (prefers-contrast: more) {
 	/* Light context (base direction) */
 	:root {
@@ -22,7 +21,7 @@
 		--color-info-text: var(--color-blue-800);
 	}
 
-	/* Dark context — system preference */
+	/* Dark context, system preference */
 	@media (prefers-color-scheme: dark) {
 		:root:not([data-theme='light']) {
 			--color-text: var(--color-neutral-50);
@@ -39,7 +38,7 @@
 		}
 	}
 
-	/* Dark context — explicit */
+	/* Dark context, explicit */
 	:root[data-theme='dark'] {
 		--color-text: var(--color-neutral-50);
 		--color-text-muted: var(--color-neutral-200);
