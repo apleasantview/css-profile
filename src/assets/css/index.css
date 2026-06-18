@@ -12,8 +12,8 @@
 @import './document/blocks/table.css';
 @import './document/blocks/lists.css';
 @import './document/blocks/details.css';
-@import './document/utilities/flow.css';
-@import './document/utilities/label.css';
+@import './document/utils/flow.css';
+@import './document/utils/label.css';
 
 /* 03. Components — shared UI (built from the vocabulary) */
 
