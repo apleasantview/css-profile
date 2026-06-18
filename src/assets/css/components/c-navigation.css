@@ -1,0 +1,19 @@
+.c-navigation__inner {
+	align-items:flex-end;
+  border-bottom:1px solid var(--color-rule);
+  display:flex;
+  flex-direction:column;
+  gap:var(--space-s);
+  padding-bottom:var(--space-m)
+}
+
+.c-navigation-switch {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: 0.03em;
+  padding: 0;
+}

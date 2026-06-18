@@ -1,37 +1,10 @@
 ---
-title: Theme Test
-slug: theme-test
-permalink: /theme-test/
-lang: en
+title: 'Theme Test'
+slug: 'theme-test'
+permalink: '/theme-test/'
+lang: 'en'
+layout: 'base.njk'
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <baseline-head></baseline-head>
-
-    <!-- Demo-only layout so the page is readable.
-         This is NOT part of the defaults CSS. -->
-    <style>
-      body {
-        padding: 2rem;
-      }
-      main {
-        max-width: 72ch;
-        margin-inline: auto;
-      }
-      section {
-        margin-top: 3rem;
-      }
-
-      section > * + *, header > * + * {
-        margin-top: var(--flow-space-s);
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>{{ settings.title }} - Theme test</h1>
         <div class="breadcrumbs">
           <a href="/">home</a> / theme test
         </div>
@@ -175,10 +148,6 @@ console.log(greet("world"));
         </details>
       </section>
 
-      <footer>
+      <section>
         <p><small>End of test page.</small></p>
-      </footer>
-    </main>
-  </body>
-</html>
-
+      </section>
