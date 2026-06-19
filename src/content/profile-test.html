@@ -1,0 +1,217 @@
+---
+title: 'Profile Test'
+slug: 'profile-test'
+permalink: '/profile-test/'
+lang: 'en'
+layout: 'base.njk'
+---
+<p>
+  This page exercises the <strong>profile</strong> — the package vocabulary — naked, before any
+  presentation dresses it: the semantic colour roles, the type and space scales, radii and widths,
+  the focus ring, and the accessibility floor. Switch your OS to dark (or set
+  <code>[data-theme="dark"]</code> on <code>&lt;html&gt;</code>) and every colour role flips while the
+  names stay put — that one-way swap is the whole point of the role layer.
+</p>
+
+<!--
+  Specimen-layout styles, page-local: a harness concern, not part of profile/ or document/.
+  They consume the profile's own tokens on purpose — the test eats its own cooking.
+-->
+<style>
+  .spec-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-gap-m);
+    margin-block: var(--space-4);
+  }
+  .spec-swatch {
+    width: 8rem;
+  }
+  .spec-chip {
+    height: 3.5rem;
+    border: var(--border-width-default) solid var(--color-border);
+    border-radius: var(--border-radius-control);
+  }
+  .spec-name {
+    display: block;
+    margin-block-start: var(--space-1);
+    font-family: var(--font-family-mono);
+    font-size: var(--text-size-muted);
+    color: var(--color-text-muted);
+    word-break: break-word;
+  }
+  .spec-bar {
+    background: var(--color-accent-solid);
+    border-radius: var(--border-radius-control);
+    height: 1rem;
+  }
+  .spec-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-gap-m);
+    margin-block: var(--space-2);
+  }
+  .spec-radius {
+    width: 5rem;
+    height: 3.5rem;
+    background: var(--color-surface-active);
+    border: var(--border-width-default) solid var(--color-border);
+  }
+  .spec-width {
+    width: 5rem;
+    height: 0;
+    border-top-style: solid;
+    border-top-color: var(--color-text);
+  }
+</style>
+
+<!-- ───────────────────────── Colour roles (semantic/colors.css) ───────────────────────── -->
+
+<section aria-labelledby="neutral">
+  <h2 id="neutral">Neutral roles</h2>
+  <p>Chrome: backgrounds, surfaces, borders, the solid fill, and text. Radix's 12-step jobs, named.</p>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-background)"></div><span class="spec-name">background</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-background-subtle)"></div><span class="spec-name">background-subtle</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-surface)"></div><span class="spec-name">surface</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-surface-hover)"></div><span class="spec-name">surface-hover</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-surface-active)"></div><span class="spec-name">surface-active</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-border-subtle)"></div><span class="spec-name">border-subtle</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-border)"></div><span class="spec-name">border</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-border-hover)"></div><span class="spec-name">border-hover</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-solid)"></div><span class="spec-name">solid</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-solid-hover)"></div><span class="spec-name">solid-hover</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-solid); color: var(--color-on-solid); display: grid; place-items: center">Aa</div><span class="spec-name">on-solid</span></div>
+  </div>
+  <p style="color: var(--color-text)">Text role: high-contrast body text (<code>--color-text</code>).</p>
+  <p style="color: var(--color-text-muted)">Text role: muted / low-contrast text (<code>--color-text-muted</code>).</p>
+</section>
+
+<section aria-labelledby="accent">
+  <h2 id="accent">Accent roles</h2>
+  <p>Emphasis / brand, same shape as a status family.</p>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-accent-surface)"></div><span class="spec-name">accent-surface</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-accent-surface-hover)"></div><span class="spec-name">accent-surface-hover</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-accent-border)"></div><span class="spec-name">accent-border</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-accent-solid)"></div><span class="spec-name">accent-solid</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-accent-solid-hover)"></div><span class="spec-name">accent-solid-hover</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-accent-solid); color: var(--color-accent-on-solid); display: grid; place-items: center">Aa</div><span class="spec-name">accent-on-solid</span></div>
+  </div>
+  <p style="color: var(--color-accent-text)">Text role: accent-coloured text (<code>--color-accent-text</code>).</p>
+</section>
+
+<section aria-labelledby="status">
+  <h2 id="status">Status roles</h2>
+  <p>Convention (hue → meaning) — success, warning, danger, info. Never the sole signal; pair with an icon or word.</p>
+
+  <h3>Success</h3>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-success-surface)"></div><span class="spec-name">success-surface</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-success-border)"></div><span class="spec-name">success-border</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-success-solid); color: var(--color-success-on-solid); display: grid; place-items: center">Aa</div><span class="spec-name">success-solid / on-solid</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-success-surface); color: var(--color-success-text); display: grid; place-items: center">Aa</div><span class="spec-name">success-text</span></div>
+  </div>
+
+  <h3>Warning</h3>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-warning-surface)"></div><span class="spec-name">warning-surface</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-warning-border)"></div><span class="spec-name">warning-border</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-warning-solid); color: var(--color-warning-on-solid); display: grid; place-items: center">Aa</div><span class="spec-name">warning-solid / on-solid</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-warning-surface); color: var(--color-warning-text); display: grid; place-items: center">Aa</div><span class="spec-name">warning-text</span></div>
+  </div>
+
+  <h3>Danger</h3>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-danger-surface)"></div><span class="spec-name">danger-surface</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-danger-border)"></div><span class="spec-name">danger-border</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-danger-solid); color: var(--color-danger-on-solid); display: grid; place-items: center">Aa</div><span class="spec-name">danger-solid / on-solid</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-danger-surface); color: var(--color-danger-text); display: grid; place-items: center">Aa</div><span class="spec-name">danger-text</span></div>
+  </div>
+
+  <h3>Info</h3>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-info-surface)"></div><span class="spec-name">info-surface</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-info-border)"></div><span class="spec-name">info-border</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-info-solid); color: var(--color-info-on-solid); display: grid; place-items: center">Aa</div><span class="spec-name">info-solid / on-solid</span></div>
+    <div class="spec-swatch"><div class="spec-chip" style="background: var(--color-info-surface); color: var(--color-info-text); display: grid; place-items: center">Aa</div><span class="spec-name">info-text</span></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Type scale (semantic/typography.css) ───────────────────────── -->
+
+<section aria-labelledby="type">
+  <h2 id="type">Type scale</h2>
+  <p>The semantic size roles, largest to smallest. Each is one decision over the primitive scale (ratio 1.25).</p>
+  <p style="font-size: var(--text-size-display); line-height: var(--text-lineheight-heading)">Display <span class="spec-name">--text-size-display</span></p>
+  <p style="font-size: var(--text-size-title); line-height: var(--text-lineheight-heading)">Title <span class="spec-name">--text-size-title</span></p>
+  <p style="font-size: var(--text-size-lede)">Lede <span class="spec-name">--text-size-lede</span></p>
+  <p style="font-size: var(--text-size-body)">Body <span class="spec-name">--text-size-body</span></p>
+  <p style="font-size: var(--text-size-secondary)">Secondary <span class="spec-name">--text-size-secondary</span></p>
+  <p style="font-size: var(--text-size-muted)">Muted <span class="spec-name">--text-size-muted</span></p>
+  <p style="font-family: var(--font-family-code); font-size: var(--text-size-code)">Code 1234 <span class="spec-name">--text-size-code</span></p>
+</section>
+
+<!-- ───────────────────────── Space scale (primitives/spacing.css) ───────────────────────── -->
+
+<section aria-labelledby="space">
+  <h2 id="space">Space scale</h2>
+  <p>The primitive rhythm (n = px ÷ 4). The inset / gap / flow roles map t-shirt sizes onto these.</p>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-1)"></div><span class="spec-name">space-1 · 4px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-2)"></div><span class="spec-name">space-2 · 8px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-3)"></div><span class="spec-name">space-3 · 12px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-4)"></div><span class="spec-name">space-4 · 16px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-5)"></div><span class="spec-name">space-5 · 20px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-6)"></div><span class="spec-name">space-6 · 24px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-7)"></div><span class="spec-name">space-7 · 28px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-8)"></div><span class="spec-name">space-8 · 32px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-12)"></div><span class="spec-name">space-12 · 48px</span></div>
+  <div class="spec-row"><div class="spec-bar" style="width: var(--space-16)"></div><span class="spec-name">space-16 · 64px</span></div>
+</section>
+
+<!-- ───────────────────────── Borders (primitives + semantic/borders.css) ───────────────────────── -->
+
+<section aria-labelledby="borders">
+  <h2 id="borders">Radii &amp; widths</h2>
+
+  <h3>Radius roles</h3>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-radius" style="border-radius: var(--border-radius-void)"></div><span class="spec-name">radius-void</span></div>
+    <div class="spec-swatch"><div class="spec-radius" style="border-radius: var(--border-radius-control)"></div><span class="spec-name">radius-control</span></div>
+    <div class="spec-swatch"><div class="spec-radius" style="border-radius: var(--border-radius-card)"></div><span class="spec-name">radius-card</span></div>
+    <div class="spec-swatch"><div class="spec-radius" style="border-radius: var(--border-radius-pill)"></div><span class="spec-name">radius-pill</span></div>
+    <div class="spec-swatch"><div class="spec-radius" style="border-radius: var(--border-radius-circle); width: 3.5rem"></div><span class="spec-name">radius-circle</span></div>
+  </div>
+
+  <h3>Border widths</h3>
+  <div class="spec-grid">
+    <div class="spec-swatch"><div class="spec-width" style="border-top-width: var(--border-width-1)"></div><span class="spec-name">width-1 · 1px</span></div>
+    <div class="spec-swatch"><div class="spec-width" style="border-top-width: var(--border-width-2)"></div><span class="spec-name">width-2 · 2px</span></div>
+    <div class="spec-swatch"><div class="spec-width" style="border-top-width: var(--border-width-4)"></div><span class="spec-name">width-4 · 4px</span></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Focus ring (semantic/borders.css) ───────────────────────── -->
+
+<section aria-labelledby="focus">
+  <h2 id="focus">Focus ring</h2>
+  <p>Tab to a focusable element to see the ring (<code>--focus-ring-width</code>, <code>--focus-ring-offset</code>, <code>--color-accent-border</code>):</p>
+  <p>
+    <a href="#focus">a focusable link</a>, then a
+    <button type="button">focusable button</button>.
+  </p>
+</section>
+
+<!-- ───────────────────────── Accessibility floor (accessibility/) ───────────────────────── -->
+
+<section aria-labelledby="a11y">
+  <h2 id="a11y">Accessibility floor</h2>
+  <p>
+    There is a screen-reader-only note right after this sentence —
+    <span class="sr-only">this text is visually hidden but announced by assistive tech (.sr-only).</span>
+    invisible on screen, present to a screen reader.
+  </p>
+  <p>The skip-link behaviour ships in the profile; the visible focused state is the consumer's to style.</p>
+</section>
+
+<p><small>End of profile test.</small></p>

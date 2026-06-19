@@ -1,0 +1,163 @@
+---
+title: 'Document Test'
+slug: 'document-test'
+permalink: '/document-test/'
+lang: 'en'
+layout: 'base.njk'
+---
+<p>
+  This page exercises every bare tag <code>base.css</code> styles and every structure in
+  <code>blocks/</code>, in the same order, so the presentation can be eyeballed in one pass.
+</p>
+
+<!-- ───────────────────────── base.css — bare tags ───────────────────────── -->
+
+<section aria-labelledby="text">
+  <h2 id="text">Text</h2>
+  <p>
+    A paragraph with <em>emphasis</em>, <strong>strong text</strong>, <small>small print</small>,
+    <mark>a highlight</mark>, and an abbreviation: <abbr title="Cascading Style Sheets">CSS</abbr>.
+  </p>
+  <p>
+    Maths sit inline too: H<sub>2</sub>O (subscript) and E = mc<sup>2</sup> (superscript).
+  </p>
+</section>
+
+<section aria-labelledby="links">
+  <h2 id="links">Links</h2>
+  <p>
+    A <a href="#text">regular link</a>, a <a href="https://example.com">link to an external site</a>,
+    and a <a href="#links">link to hover and focus</a> — underlined, with a clear keyboard focus ring.
+  </p>
+</section>
+
+<section aria-labelledby="blockquote">
+  <h2 id="blockquote">Blockquote</h2>
+  <blockquote>
+    <p>Simplicity is about subtracting the obvious and adding the meaningful.</p>
+    <p><cite>— John Maeda</cite></p>
+  </blockquote>
+</section>
+
+<section aria-labelledby="media">
+  <h2 id="media">Media</h2>
+  <figure>
+    <img
+      alt="A placeholder image"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect width='100%25' height='100%25' fill='%23f6f8fa'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%239aa4b2'%3E1200%C3%97675%3C/text%3E%3C/svg%3E"
+    />
+    <figcaption>A figure with its figcaption.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="rules">
+  <h2 id="rules">Rules</h2>
+  <p>A horizontal rule separates one passage…</p>
+  <hr />
+  <p>…from the next.</p>
+</section>
+
+<section aria-labelledby="focus">
+  <h2 id="focus">Focus</h2>
+  <p>
+    Tab through these to see the focus ring (<code>:focus-visible</code>): a
+    <a href="#focus">link</a>, then a <button type="button">button</button>.
+  </p>
+</section>
+
+<!-- ───────────────────────── blocks/ — composed structures ───────────────────────── -->
+
+<section aria-labelledby="headings">
+  <h2 id="headings">Headings</h2>
+  <p>The page title above is the <code>h1</code>. The scale below runs <code>h2</code>–<code>h6</code>.</p>
+  <h2>Heading level 2</h2>
+  <h3>Heading level 3</h3>
+  <h4>Heading level 4</h4>
+  <h5>Heading level 5</h5>
+  <h6>Heading level 6</h6>
+</section>
+
+<section aria-labelledby="code">
+  <h2 id="code">Code</h2>
+  <p>
+    Inline code <code>const x = 1;</code>, a keyboard hint <kbd>Ctrl</kbd> + <kbd>K</kbd>,
+    and sample output <samp>Done.</samp>
+  </p>
+  <pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("world"));</code></pre>
+</section>
+
+<section aria-labelledby="table">
+  <h2 id="table">Table</h2>
+  <table>
+    <caption>Example table caption</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Role</th>
+        <th scope="col">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alice</td>
+        <td>Editor</td>
+        <td>Has access to content.</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>Author</td>
+        <td>Can publish posts.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section aria-labelledby="lists">
+  <h2 id="lists">Lists</h2>
+
+  <h3>Unordered list</h3>
+  <ul>
+    <li>List item one</li>
+    <li>
+      List item two
+      <ul>
+        <li>Nested item A</li>
+        <li>Nested item B</li>
+      </ul>
+    </li>
+    <li>List item three</li>
+  </ul>
+
+  <h3>Ordered list</h3>
+  <ol>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ol>
+
+  <h3>Description list</h3>
+  <dl>
+    <dt>Definition term</dt>
+    <dd>Definition description with a bit more text to wrap onto the next line.</dd>
+    <dt>Another term</dt>
+    <dd>Another description, to show the spacing between a description and the next term.</dd>
+  </dl>
+</section>
+
+<section aria-labelledby="details">
+  <h2 id="details">Details / summary</h2>
+  <details open>
+    <summary>Expandable section (shown open)</summary>
+    <p>This content is inside <code>&lt;details&gt;</code>. It should be readable and spaced.</p>
+    <ul>
+      <li>Item one</li>
+      <li>Item two</li>
+    </ul>
+  </details>
+</section>
+
+<p><small>End of test page.</small></p>
