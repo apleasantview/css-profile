@@ -12,7 +12,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── base.css — bare tags ───────────────────────── -->
 
-<section aria-labelledby="text">
+<section class="flow" aria-labelledby="text">
   <h2 id="text">Text</h2>
   <p>
     A paragraph with <em>emphasis</em>, <strong>strong text</strong>, <small>small print</small>,
@@ -23,7 +23,7 @@ layout: 'base.njk'
   </p>
 </section>
 
-<section aria-labelledby="links">
+<section class="flow" aria-labelledby="links">
   <h2 id="links">Links</h2>
   <p>
     A <a href="#text">regular link</a>, a <a href="https://example.com">link to an external site</a>,
@@ -31,7 +31,7 @@ layout: 'base.njk'
   </p>
 </section>
 
-<section aria-labelledby="blockquote">
+<section class="flow" aria-labelledby="blockquote">
   <h2 id="blockquote">Blockquote</h2>
   <blockquote>
     <p>Simplicity is about subtracting the obvious and adding the meaningful.</p>
@@ -39,7 +39,7 @@ layout: 'base.njk'
   </blockquote>
 </section>
 
-<section aria-labelledby="media">
+<section class="flow" aria-labelledby="media">
   <h2 id="media">Media</h2>
   <figure>
     <img
@@ -50,14 +50,14 @@ layout: 'base.njk'
   </figure>
 </section>
 
-<section aria-labelledby="rules">
+<section class="flow" aria-labelledby="rules">
   <h2 id="rules">Rules</h2>
   <p>A horizontal rule separates one passage…</p>
   <hr />
   <p>…from the next.</p>
 </section>
 
-<section aria-labelledby="focus">
+<section class="flow" aria-labelledby="focus">
   <h2 id="focus">Focus</h2>
   <p>
     Tab through these to see the focus ring (<code>:focus-visible</code>): a
@@ -67,7 +67,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── blocks/ — composed structures ───────────────────────── -->
 
-<section aria-labelledby="headings">
+<section class="flow" aria-labelledby="headings">
   <h2 id="headings">Headings</h2>
   <p>The page title above is the <code>h1</code>. The scale below runs <code>h2</code>–<code>h6</code>.</p>
   <h2>Heading level 2</h2>
@@ -77,7 +77,7 @@ layout: 'base.njk'
   <h6>Heading level 6</h6>
 </section>
 
-<section aria-labelledby="code">
+<section class="flow" aria-labelledby="code">
   <h2 id="code">Code</h2>
   <p>
     Inline code <code>const x = 1;</code>, a keyboard hint <kbd>Ctrl</kbd> + <kbd>K</kbd>,
@@ -90,7 +90,7 @@ layout: 'base.njk'
 console.log(greet("world"));</code></pre>
 </section>
 
-<section aria-labelledby="table">
+<section class="flow" aria-labelledby="table">
   <h2 id="table">Table</h2>
   <table>
     <caption>Example table caption</caption>
@@ -116,7 +116,7 @@ console.log(greet("world"));</code></pre>
   </table>
 </section>
 
-<section aria-labelledby="lists">
+<section class="flow" aria-labelledby="lists">
   <h2 id="lists">Lists</h2>
 
   <h3>Unordered list</h3>
@@ -148,7 +148,7 @@ console.log(greet("world"));</code></pre>
   </dl>
 </section>
 
-<section aria-labelledby="details">
+<section class="flow" aria-labelledby="details">
   <h2 id="details">Details / summary</h2>
   <details open>
     <summary>Expandable section (shown open)</summary>

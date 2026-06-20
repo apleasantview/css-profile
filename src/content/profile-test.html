@@ -67,7 +67,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── Colour roles (semantic/colors.css) ───────────────────────── -->
 
-<section aria-labelledby="neutral">
+<section class="flow" aria-labelledby="neutral">
   <h2 id="neutral">Neutral roles</h2>
   <p>Chrome: backgrounds, surfaces, borders, the solid fill, and text. Radix's 12-step jobs, named.</p>
   <div class="spec-grid">
@@ -87,7 +87,7 @@ layout: 'base.njk'
   <p style="color: var(--color-text-muted)">Text role: muted / low-contrast text (<code>--color-text-muted</code>).</p>
 </section>
 
-<section aria-labelledby="accent">
+<section class="flow" aria-labelledby="accent">
   <h2 id="accent">Accent roles</h2>
   <p>Emphasis / brand, same shape as a status family.</p>
   <div class="spec-grid">
@@ -101,7 +101,7 @@ layout: 'base.njk'
   <p style="color: var(--color-accent-text)">Text role: accent-coloured text (<code>--color-accent-text</code>).</p>
 </section>
 
-<section aria-labelledby="status">
+<section class="flow" aria-labelledby="status">
   <h2 id="status">Status roles</h2>
   <p>Convention (hue → meaning) — success, warning, danger, info. Never the sole signal; pair with an icon or word.</p>
 
@@ -140,7 +140,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── Type scale (semantic/typography.css) ───────────────────────── -->
 
-<section aria-labelledby="type">
+<section class="flow" aria-labelledby="type">
   <h2 id="type">Type scale</h2>
   <p>The semantic size roles, largest to smallest. Each is one decision over the primitive scale (ratio 1.25).</p>
   <p style="font-size: var(--text-size-display); line-height: var(--text-lineheight-heading)">Display <span class="spec-name">--text-size-display</span></p>
@@ -154,7 +154,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── Space scale (primitives/spacing.css) ───────────────────────── -->
 
-<section aria-labelledby="space">
+<section class="flow" aria-labelledby="space">
   <h2 id="space">Space scale</h2>
   <p>The primitive rhythm (n = px ÷ 4). The inset / gap / flow roles map t-shirt sizes onto these.</p>
   <div class="spec-row"><div class="spec-bar" style="width: var(--space-1)"></div><span class="spec-name">space-1 · 4px</span></div>
@@ -171,7 +171,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── Borders (primitives + semantic/borders.css) ───────────────────────── -->
 
-<section aria-labelledby="borders">
+<section class="flow" aria-labelledby="borders">
   <h2 id="borders">Radii &amp; widths</h2>
 
   <h3>Radius roles</h3>
@@ -193,7 +193,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── Focus ring (semantic/borders.css) ───────────────────────── -->
 
-<section aria-labelledby="focus">
+<section class="flow" aria-labelledby="focus">
   <h2 id="focus">Focus ring</h2>
   <p>Tab to a focusable element to see the ring (<code>--focus-ring-width</code>, <code>--focus-ring-offset</code>, <code>--color-accent-border</code>):</p>
   <p>
@@ -204,7 +204,7 @@ layout: 'base.njk'
 
 <!-- ───────────────────────── Accessibility floor (accessibility/) ───────────────────────── -->
 
-<section aria-labelledby="a11y">
+<section class="flow" aria-labelledby="a11y">
   <h2 id="a11y">Accessibility floor</h2>
   <p>
     There is a screen-reader-only note right after this sentence —

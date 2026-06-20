@@ -3,10 +3,10 @@
 <baseline-head></baseline-head>
   <body>
     <header>
-      {% include "components/c-navigation.njk" %}
+      <div class="wrapper">{% include "components/c-navigation.njk" %}</div>
     </header>
 
-    <main class="flow">
+    <main class="flow wrapper">
       <h1>{{ title }}</h1>
       {{ content | safe }}
     </main>
