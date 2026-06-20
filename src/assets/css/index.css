@@ -6,18 +6,24 @@
 /* 01. Profile — shared vocabulary + a11y floor (primitives → semantic → themes → accessibility) */
 @import './profile/profile.css';
 
-/* 02. Document — presentation / tokens → base → blocks → layouts → utilities */
+/* 02. Resets — normalised browser defaults */
+@import './resets/modern-reset.css';
+
+/* 03. Document — presentation / tokens → base → blocks → layout → utils */
 @import './document/tokens.css';
 @import './document/base.css';
+@import './document/blocks/headings.css';
+@import './document/blocks/code.css';
 @import './document/blocks/table.css';
 @import './document/blocks/lists.css';
 @import './document/blocks/details.css';
+@import './document/layout/wrapper.css';
 @import './document/utils/flow.css';
 @import './document/utils/label.css';
 
-/* 03. Components — shared UI (built from the vocabulary) */
+/* 04. Components — shared UI (built from the vocabulary) */
 @import './components/c-navigation.css';
 
-/* 04. Vendors — third-party CSS, dropped in as-is (no assembler). Last by
+/* 05. Vendors — third-party CSS, dropped in as-is (no assembler). Last by
  * design: an enhancement, not a foundation — nothing depends on it, so it lands
  * after everything authored. Admitted, not assumed. */

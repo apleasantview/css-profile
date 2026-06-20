@@ -3,13 +3,21 @@
 		<button class="c-navigation-switch" onclick="toggleTheme()" id="themeBtn">
 			light — switch to dark
 		</button>
-		<div class="c-navgation-pages">
+		<div class="c-navigation-pages">
 			<a class="c-navigation-switch active" href="/">
 				{{ settings.title }}
-			<a>
-			<a class="c-navigation-switch" href="/theme-test">
-				theme test
 			</a>
+			<div class="c-navigation__group">
+				<a class="c-navigation-switch" href="/vocabulary">
+					vocabulary
+				</a>
+				<a class="c-navigation-switch" href="/profile-test">
+					profile test
+				</a>
+				<a class="c-navigation-switch" href="/document-test">
+					document test
+				</a>
+			</div>
 		</div>
 	</div>
 </nav>

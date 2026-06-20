@@ -1,5 +1,6 @@
-/* Base. Every bare tag the document styles, in reading order. The composed
- * structures (table, lists, details) live in blocks/; everything else is here. */
+/* Base. The document's bare tags, in reading order. The composed structures
+ * (table, lists, details) live in blocks/, alongside headings and code — filed
+ * there as a pragmatic home, though they're still elements by the joint. */
 
 /* Structure */
 html {
@@ -7,10 +8,9 @@ html {
 }
 
 body {
-	min-height: 100vh;
 	display: flex;
+	min-height: 100vh;
 	flex-direction: column;
-	padding: var(--space-l) var(--space-m);
 	font-family: var(--font-family-body);
 	font-size: var(--text-size-body);
 	line-height: var(--text-lineheight-body);
@@ -32,44 +32,6 @@ main {
 footer {
 	margin-top: auto;
 	padding-block: var(--space-inset-xs);
-}
-
-/* The reading column: content centered at the measure */
-header,
-main,
-footer {
-	max-width: var(--measure);
-	margin-inline: auto;
-}
-
-/* Headings. The editorial treatment: light weight throughout, h1 tracked tight,
- * h2 a small uppercase muted label. h1/h2 tracking diverges (opposite signs), so
- * it's set per element from the primitive lexicon — the single heading-tracking
- * role is too coarse for this presentation. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: var(--text-lineheight-heading);
-	font-weight: var(--font-weight-normal);
-}
-
-h1 {
-	font-size: var(--text-size-display);
-	letter-spacing: var(--letter-spacing-tight);
-}
-
-h2 {
-	font-size: var(--text-size-eyebrow);
-	letter-spacing: var(--letter-spacing-wider);
-	text-transform: uppercase;
-	color: var(--color-text-muted);
-}
-
-h3 {
-	font-size: var(--text-size-body);
 }
 
 /* Text */
@@ -112,6 +74,7 @@ sup {
 sup {
 	top: -0.5em;
 }
+
 sub {
 	bottom: -0.25em;
 }
@@ -128,48 +91,6 @@ a {
 
 a:hover {
 	text-decoration-color: currentColor;
-}
-
-/* Code */
-code {
-	font-family: var(--font-family-code);
-	font-size: var(--text-size-code);
-	line-height: var(--text-lineheight-code);
-	border: var(--border-width-default) solid var(--color-border);
-	padding: 0.15em 0.35em;
-	border-radius: var(--border-radius-control);
-	background: var(--color-background-subtle);
-}
-
-kbd,
-samp,
-pre {
-	font-family: var(--font-family-code);
-	font-size: var(--text-size-secondary);
-}
-
-pre {
-	padding: 1rem;
-	border: var(--border-width-default) solid var(--color-border);
-	border-radius: var(--border-radius-card);
-	background: var(--color-background-subtle);
-	overflow: auto;
-	max-width: 100%;
-}
-
-pre code {
-	padding: 0;
-	border: 0;
-	border-radius: var(--border-radius-void);
-	background: transparent;
-}
-
-kbd {
-	padding: 0.15em 0.35em;
-	border: var(--border-width-default) solid var(--color-border);
-	border-bottom-width: var(--border-width-2);
-	border-radius: var(--border-radius-control);
-	background: var(--color-background-subtle);
 }
 
 /* Blockquote */
@@ -211,8 +132,7 @@ dl,
 blockquote,
 pre,
 table,
-figure,
-hr {
+figure {
 	max-inline-size: var(--text-inlinesize-body);
 }
 
