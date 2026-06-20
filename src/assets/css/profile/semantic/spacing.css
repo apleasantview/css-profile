@@ -25,10 +25,4 @@
 	--flow-space-s: 1em;
 	--flow-space-m: 1.25em;
 	--flow-space-xl: 1.75em;
-
-	/* Wrapper utility, mis-layered: a max-width container is an object concern,
-	 * not a spacing role. Parked here until 02.document/objects/ exists to receive it. */
-	--wrapper-max-width: 105rem;
-	--wrapper-margin-inline: auto;
-	--wrapper-padding-inline: var(--space-7);
 }
