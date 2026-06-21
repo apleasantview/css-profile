@@ -132,10 +132,29 @@ const borders = [
 	['--focus-ring-offset', 'the focus outline offset'],
 ];
 
+/* The primitives, read straight from the CSS — name *and* value. No hand-kept
+ * meaning here: a primitive's value is its meaning (the keyword is already the
+ * vocabulary). Grouped the way the semantic roles are: colour by ramp, the
+ * other files whole. */
+function declaredPairs(file) {
+	const css = fs.readFileSync(file, 'utf8');
+	const out = [];
+	for (const m of css.matchAll(/^\s*(--[\w-]+)\s*:\s*([^;]+);/gm)) {
+		out.push([m[1], m[2].trim()]);
+	}
+	return out;
+}
+
+const primitiveFiles = [
+	{ title: 'Type', file: 'typography' },
+	{ title: 'Space', file: 'spacing' },
+	{ title: 'Borders', file: 'borders' },
+];
+
 /* Reach-for-the-primitive: no role by design (the keyword is the vocabulary, or
- * it's a named edge). Listed so the menu is complete, tagged so the drift check
- * doesn't expect them among the roles. */
-const primitives = {
+ * it's a named edge). The handful you reach for directly, hand-kept; tagged so
+ * the drift check doesn't expect them among the roles. */
+const reach = {
 	'Type — weight & tracking (no role)': [
 		['--font-weight-light', '300'],
 		['--font-weight-normal', '400'],
@@ -179,7 +198,25 @@ const documentLocal = [
 const rows = (pairs) =>
 	pairs.map(([name, why]) => ({ name, for: why, exists: allNames.has(name) }));
 
-const groups = [
+/* Colour splits into its natural ramps (black & white fold into neutral); the
+ * other primitive files stay whole. */
+const colourPrimitives = declaredPairs(path.join(cssDir, 'profile/primitives/colors.css'));
+const colourRamp = (...prefixes) =>
+	colourPrimitives.filter(([name]) => prefixes.some((p) => name.startsWith(p)));
+
+const primitiveGroups = [
+	{ title: 'Colour — Neutral', roles: rows(colourRamp('--color-black', '--color-white', '--color-neutral-')) },
+	{ title: 'Colour — Blue', roles: rows(colourRamp('--color-blue-')) },
+	{ title: 'Colour — Green', roles: rows(colourRamp('--color-green-')) },
+	{ title: 'Colour — Amber', roles: rows(colourRamp('--color-amber-')) },
+	{ title: 'Colour — Red', roles: rows(colourRamp('--color-red-')) },
+	...primitiveFiles.map(({ title, file }) => ({
+		title,
+		roles: rows(declaredPairs(path.join(cssDir, 'profile/primitives', `${file}.css`))),
+	})),
+];
+
+const semanticsGroups = [
 	{ title: 'Colour — Text', roles: rows(colour.Text) },
 	{ title: 'Colour — Surfaces', roles: rows(colour.Surfaces) },
 	{ title: 'Colour — Borders', roles: rows(colour.Borders) },
@@ -190,7 +227,7 @@ const groups = [
 	{ title: 'Borders', roles: rows(borders) },
 ];
 
-const primitiveGroups = Object.entries(primitives).map(([title, pairs]) => ({
+const reachGroups = Object.entries(reach).map(([title, pairs]) => ({
 	title,
 	roles: rows(pairs),
 }));
@@ -199,15 +236,16 @@ const primitiveGroups = Object.entries(primitives).map(([title, pairs]) => ({
  * nowhere — across every section it renders, not just the by-job groups. */
 const documentLocalRows = rows(documentLocal);
 const documented = new Set(
-	[...groups, ...primitiveGroups, { roles: documentLocalRows }].flatMap((g) =>
+	[...primitiveGroups, ...semanticsGroups, ...reachGroups, { roles: documentLocalRows }].flatMap((g) =>
 		g.roles.map((r) => r.name),
 	),
 );
 const undocumented = [...roleNames].filter((n) => !documented.has(n)).sort();
 
 export default {
-	groups,
 	primitiveGroups,
+	semanticsGroups,
+	reachGroups,
 	documentLocal: documentLocalRows,
 	undocumented,
 	roleCount: roleNames.size,

@@ -51,23 +51,51 @@ layout: 'base.njk'
   }
 </style>
 
-{% for group in vocabulary.groups %}
-<section class="flow" aria-labelledby="{{ group.title | slugify }}">
-  <h2 id="{{ group.title | slugify }}">{{ group.title }}</h2>
-  {% if group.note %}<p class="vocab-note">{{ group.note }}</p>{% endif %}
-  <dl class="vocab">
-    {% for role in group.roles %}
-    <dt{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</dt>
-    <dd>{{ role.for }}</dd>
-    {% endfor %}
-  </dl>
+<section class="flow" aria-labelledby="primitives">
+  <h2 id="primitives">Primitives</h2>
+  <p class="vocab-note">The raw scales, read straight from the CSS with their values — a primitive's value is its meaning.</p>
+  {% for group in vocabulary.primitiveGroups %}
+  <details name="primitive-group">
+    <summary>
+      <h3 id="{{ group.title | slugify }}">{{ group.title }}</h3>
+    </summary>
+    {% if group.note %}<p class="vocab-note">{{ group.note }}</p>{% endif %}
+    <dl class="vocab">
+      {% for role in group.roles %}
+      <dt{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</dt>
+      <dd>{{ role.for }}</dd>
+      {% endfor %}
+    </dl>
+  </details>
+  {% endfor %}
 </section>
-{% endfor %}
+
+<hr>
+
+<section class="flow" aria-labelledby="{{ group.title | slugify }}">
+  <h2 id="semantics">Semantics</h2>
+  {% for group in vocabulary.semanticsGroups %}
+  <details name="semantic-group">
+    <summary>
+      <h3 id="{{ group.title | slugify }}">{{ group.title }}</h3>
+    </summary>
+    {% if group.note %}<p class="vocab-note">{{ group.note }}</p>{% endif %}
+    <dl class="vocab">
+      {% for role in group.roles %}
+      <dt{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</dt>
+      <dd>{{ role.for }}</dd>
+      {% endfor %}
+    </dl>
+  </details>
+  {% endfor %}
+</section>
+
+<hr>
 
 <section class="flow" aria-labelledby="reach-for-the-primitive">
   <h2 id="reach-for-the-primitive">Reach for the primitive</h2>
   <p class="vocab-note">No role by design — the keyword is already the vocabulary, or it's a named edge.</p>
-  {% for group in vocabulary.primitiveGroups %}
+  {% for group in vocabulary.reachGroups %}
   <h3>{{ group.title }}</h3>
   <dl class="vocab">
     {% for role in group.roles %}
@@ -77,6 +105,8 @@ layout: 'base.njk'
   </dl>
   {% endfor %}
 </section>
+
+<hr>
 
 <section class="flow" aria-labelledby="document-local">
   <h2 id="document-local">Document-local</h2>
