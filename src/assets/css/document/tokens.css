@@ -25,7 +25,7 @@
 	 * adds it and re-points the body role at it; headings inherit. */
   --font-family-serif: ui-serif, Georgia, "Times New Roman", serif;
   --font-family-body: var(--font-family-serif);
-  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --font-family-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
   /* Type — body roles, overridden for this presentation: a fluid size, more
 	 * generous leading, prose capped to the reading column. */
