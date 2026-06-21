@@ -53,7 +53,7 @@ layout: 'base.njk'
 
 <section class="flow" aria-labelledby="primitives">
   <h2 id="primitives">Primitives</h2>
-  <p class="vocab-note">The raw scales, read straight from the CSS with their values — a primitive's value is its meaning.</p>
+  <p class="vocab-note">The raw scales, read straight from the CSS with their values.</p>
   {% for group in vocabulary.primitiveGroups %}
   <details name="primitive-group">
     <summary>
@@ -74,6 +74,7 @@ layout: 'base.njk'
 
 <section class="flow" aria-labelledby="{{ group.title | slugify }}">
   <h2 id="semantics">Semantics</h2>
+  <p class="vocab-note">The named jobs — each maps a meaning onto a primitive, so the value can shift without the name moving.</p>
   {% for group in vocabulary.semanticsGroups %}
   <details name="semantic-group">
     <summary>
