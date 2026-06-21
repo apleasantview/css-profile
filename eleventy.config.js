@@ -8,7 +8,11 @@ const settings = {
   defaultLanguage: "en",
   head: {
 		link: [{ rel: 'stylesheet', href: '/assets/css/index.css' }],
-		meta: [{ name: 'color-scheme', content: 'light dark' }]
+		meta: [{ name: 'color-scheme', content: 'light dark' }],
+		// Pre-paint: honour a saved theme before the body renders, so no flash.
+		script: [
+			{ content: "var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;" }
+		]
 	},
   seo: {}
 };

@@ -1,8 +1,6 @@
 <nav class="c-navigation">
 	<div class="c-navigation__inner">
-		<button class="c-navigation-switch" onclick="toggleTheme()" id="themeBtn">
-			light — switch to dark
-		</button>
+		<button class="c-navigation-switch" type="button" data-theme-toggle></button>
 		<div class="c-navigation-pages">
 			{% set active = 'active' if ('/' == permalink) %}
 			<a class="c-navigation-switch {{ active }}" href="/">
