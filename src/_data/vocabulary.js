@@ -162,7 +162,7 @@ const primitives = {
 const documentLocal = [
 	['--measure', 'the reading-column width (62ch)'],
 	['--font-family-serif', "the serif the profile doesn't ship (body re-points at it)"],
-	['--font-mono', 'document mono face'],
+	['--font-family-mono', 'document mono face'],
 	['--text-label', 'the .label size (colophon, byline)'],
 	['--text-size-eyebrow', 'the small-caps h2 label size'],
 	['--space-xs', 'document spacing scale'],

@@ -34,6 +34,10 @@ footer {
 	padding-block: var(--space-inset-xs);
 }
 
+section {
+	padding-top: var(--space-inset-m);
+}
+
 /* Text */
 p {
 	letter-spacing: var(--text-letterspacing-body);
@@ -95,7 +99,9 @@ a:hover {
 
 /* Blockquote */
 blockquote {
-	padding: var(--space-s) 0 var(--space-s) var(--space-m);
+	padding-block: var(--space-xs);
+	padding-inline: var(--space-s) 0;
+	margin-inline: var(--space-xs) 0;
 	border-inline-start: var(--border-width-default) solid var(--color-border);
 	color: var(--color-text-muted);
 	font-style: italic;
