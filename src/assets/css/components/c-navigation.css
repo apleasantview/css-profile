@@ -23,11 +23,16 @@
   border: none;
   color: var(--color-text-muted);
   cursor: pointer;
-  font-family: var(--font-mono);
+  font-family: var(--font-family-mono);
   font-size: var(--text-size-mono);
   letter-spacing: 0.03em;
   padding: 0;
   line-height: 1;
+  text-decoration: none;
+}
+
+.c-navigation-switch.active, .c-navigation-switch:hover {
+  color: var(--color-text);
 }
 
 .c-navigation-pages {

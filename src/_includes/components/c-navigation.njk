@@ -4,19 +4,16 @@
 			light — switch to dark
 		</button>
 		<div class="c-navigation-pages">
-			<a class="c-navigation-switch active" href="/">
+			{% set active = 'active' if ('/' == permalink) %}
+			<a class="c-navigation-switch {{ active }}" href="/">
 				{{ settings.title }}
 			</a>
 			<div class="c-navigation__group">
-				<a class="c-navigation-switch" href="/vocabulary">
-					vocabulary
-				</a>
-				<a class="c-navigation-switch" href="/profile-test">
-					profile test
-				</a>
-				<a class="c-navigation-switch" href="/document-test">
-					document test
-				</a>
+				{% set navigation = { 'vocabulary': '/vocabulary/', 'profile': '/profile-test/', 'document': '/document-test/' } %}
+				{% for item, link in navigation %}
+				{% set active = 'active' if (link == permalink) %}
+					<a class="c-navigation-switch {{ active }}" href="{{ link }}">{{ item }}</a>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
