@@ -5,7 +5,7 @@
  * instead of being guessed at. No light/dark split; the OS decides direction.
  * Imported last so it wins when active.
  *
- * Pairs with 02.document/generic/forms.css: `appearance: none` strips a control's
+ * Pairs with resets/forms.css: `appearance: none` strips a control's
  * native system colours, so this hands them back. Reset and restore are one duty. */
 @media (forced-colors: active) {
 	:root {
