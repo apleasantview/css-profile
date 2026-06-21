@@ -3,7 +3,7 @@ import baseline, {
 } from "@apleasantview/eleventy-plugin-baseline";
 
 const settings = {
-  title: "css-profile",
+  title: "css profile",
   url: process.env.URL,
   defaultLanguage: "en",
   head: {
