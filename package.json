@@ -14,7 +14,7 @@
   "license": "CC-BY-4.0",
   "dependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "@apleasantview/eleventy-plugin-baseline": "^0.1.0-next.42",
+    "@apleasantview/eleventy-plugin-baseline": "^0.1.0-next.43",
     "cross-env": "^10.1.0",
     "rimraf": "^6.1.3"
   }
