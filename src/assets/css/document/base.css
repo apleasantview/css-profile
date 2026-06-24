@@ -87,13 +87,16 @@ sub {
 a {
 	color: var(--color-text);
 	text-decoration: underline;
-	text-decoration-color: var(--color-border);
+	text-decoration-color: currentColor;
 	text-decoration-thickness: var(--link-underline-thickness);
 	text-underline-offset: var(--link-underline-offset);
-	transition: text-decoration-color 0.15s ease-out;
+	transition:
+		color 0.15s ease-out,
+		text-decoration-color 0.15s ease-out;
 }
 
 a:hover {
+	color: var(--color-solid-hover);
 	text-decoration-color: currentColor;
 }
 
