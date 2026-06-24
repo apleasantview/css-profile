@@ -7,10 +7,9 @@
 				{{ settings.title }}
 			</a>
 			<div class="c-navigation__group">
-				{% set navigation = { 'vocabulary': '/vocabulary/', 'profile': '/profile-test/', 'document': '/document-test/' } %}
-				{% for item, link in navigation %}
-				{% set active = 'active' if (link == permalink) %}
-					<a class="c-navigation-switch {{ active }}" href="{{ link }}">{{ item }}</a>
+				{% for item in navigation %}
+				{% set active = 'active' if (item.url == permalink) %}
+					<a class="c-navigation-switch {{ active }}" href="{{ item.url }}">{{ item.label }}</a>
 				{% endfor %}
 			</div>
 		</div>
