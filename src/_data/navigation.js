@@ -19,7 +19,7 @@ export default [
 		url: '/lexicon/',
 		children: [
 			{ label: 'vocabulary', url: '/lexicon/vocabulary/' },
-			{ label: 'profile', url: '/lexicon/profile-test/' },
+			{ label: 'raw', url: '/lexicon/profile-test/' },
 		],
 	},
 	{

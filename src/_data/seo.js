@@ -8,6 +8,6 @@ export default {
 		url: 'https://apv-css-profile.netlify.app/og.jpg',
 		width: 1200,
 		height: 630,
-		alt: 'CSS Profile, an inquiry into site identity'
+		alt: "CSS Profile, an inquiry into the document's identity"
 	}
 };

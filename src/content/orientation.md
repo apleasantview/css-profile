@@ -62,4 +62,4 @@ No build step rearranges any of this. What you read on disk is what the cascade 
 
 The structure stays legible because it was kept legible: the numbered folders, the one-way dependency, the cut between package and consumer are there to be read, not only to run.
 
-This makes the folder an artefact of the inquiry — though not the kind an investigation leaves behind by accident, the residue it sheds on the way to somewhere else. This one was made on purpose. The question was how a document comes to present itself, and the answer turns out to be a structure you can hold and walk through. The inquiry, in the end, is a folder — made to be opened.
+This makes the folder an artefact of the inquiry — not the residue an investigation leaves behind, but a thing made on purpose. The question was how a document comes to present itself, and the answer turns out to be a structure you can hold and walk through. The inquiry, in the end, is a folder — made to be opened.
