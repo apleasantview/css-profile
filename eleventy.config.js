@@ -2,9 +2,11 @@ import baseline, {
   config as baselineConfig,
 } from "@apleasantview/eleventy-plugin-baseline";
 
+const siteUrl = process.env.URL || 'http://localhost:8080/';
+
 const settings = {
   title: "css profile",
-  url: process.env.URL,
+  url: siteUrl,
   defaultLanguage: "en",
   head: {
 		link: [{ rel: 'stylesheet', href: '/assets/css/index.css' }],
@@ -14,7 +16,12 @@ const settings = {
 			{ content: "var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;" }
 		]
 	},
-  seo: {}
+  seo: {
+    preserveQueryParams: false,
+    ogImage: { url: new URL('/og.jpg', siteUrl).href, width: 1200, height: 630, alt: "CSS Profile, an inquiry into the document's identity" },
+    openGraph: { type: 'website' },
+    twitter: { card: 'summary_large_image' }
+  }
 };
 
 export default async function (eleventyConfig) {
