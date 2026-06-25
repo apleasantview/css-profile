@@ -8,17 +8,18 @@ permalink: '/'
 
 An inquiry into the document's identity — not what a page is, but how it comes to present itself.
 
-`CSS Profile` is not a framework to install but a grammar to read. What you take away is the thinking; the code on disk is only one worked example — mine — to keep or rewrite for your own.
-
-What you see has been taught as a thousand rules while the grammar and lexicon have always been whispered, passed down. Never written down, until now.
-
-<div style="margin-block: var(--space-m)">
+<div style="margin-block: var(--space-m);">
 
 > Ceci n'est pas un design system.
 >
 > <cite>— Magritte, probably</cite>
 
 </div>
+
+
+`CSS Profile` is not a framework to install but a grammar to read. What you take away is the thinking; the code on disk is only one worked example — mine — to keep or rewrite for your own.
+
+What you see has been taught as a thousand rules while the grammar and lexicon have always been whispered, passed down. Never written down, until now.
 
 ---
 
