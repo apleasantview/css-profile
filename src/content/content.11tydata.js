@@ -13,7 +13,9 @@ export default {
 
 		// Compose /<section[0]>/<section[1]>/.../<slug>/.
 		const parts = (section ?? []).map((part) => this.slugify(part));
-		parts.push(slugified);
+		// A section-index page already names itself in its section chain
+		// (e.g. /lexicon/ carries section ['lexicon']); don't repeat the segment.
+		if (parts[parts.length - 1] !== slugified) parts.push(slugified);
 
 		// Leading slash anchors to the site root; trailing slash is the project convention.
 		return '/' + parts.join('/') + '/';

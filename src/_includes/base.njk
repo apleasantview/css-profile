@@ -7,6 +7,9 @@
     </header>
 
     <main class="page">
+      <div class="wrapper">
+        {% include "components/c-breadcrumbs.njk" %}
+      </div>
       <div class="flow wrapper">
         <h1>{{ title }}</h1>
         {{ content | safe }}
