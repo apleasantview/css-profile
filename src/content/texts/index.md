@@ -9,4 +9,4 @@ The language spoken — the vocabulary composed into a whole page, every bare ta
 
 - [[document-test]] — bare tags and composed blocks, walked in the order the CSS declares them. {.card--link}
 
-<div>
+</div>

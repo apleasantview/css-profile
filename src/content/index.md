@@ -8,23 +8,27 @@ permalink: '/'
 
 An inquiry into the document's identity — not what a page is, but how it comes to present itself.
 
-What you see is taught as a thousand rules while the grammar and lexicon have always been whispered, quietly handed down — yet never written down. Until now.
+What you see is taught as a thousand rules while the grammar and lexicon have always been whispered, passed down — yet never written down. Until now.
+
+<div style="margin-block: var(--space-m)">
 
 > Ceci n'est pas un design system.
 >
 > <cite>— Magritte, probably</cite>
 
+</div>
+
 ---
 
 ## Identity
 
-The identity is the question — how a page presents itself — and a profile is the answer. A document's identity is its CSS, the layer laid over a meaning already there. Give that layer a grammar and it stops being a heap of declarations: a name marks what a thing *is* — `blue-600` — or what it's *for* — `accent`, and the two belong on different layers. Keep them apart, and the stylesheet becomes a language — words, the work they do, the sentences built from them.
+The identity is the question — how a page presents itself — and a profile is the answer. A document's identity is its CSS, the layer laid over a meaning already there. Give that layer a grammar and it stops being a heap of declarations: a name marks what a thing *is* — `blue-600` — or what it's *for* — `accent` — and the two belong on different layers. Keep them apart, and the stylesheet becomes a language — words, the work they do, the sentences built from them.
 
 ## Profile
 
 A *profile* is one such language — the W3C's own word for a coherent slice of CSS. It is an identity a document can wear, and it can wear more than one.
 
-The grammar is the artifact; the stylesheet beneath this page is only the specimen. From the inside, that identity is a contract — a single locked directory, `profile/`, that everything else is written against. The identities change; the contract does not. The whole inquiry, in the end, is a folder you can open.
+The grammar is the artefact; the stylesheet beneath this page is only the specimen. From the inside, that identity is a contract — a single locked directory, `profile/`, that everything else is written against. The identities change; the contract does not. The whole inquiry, in the end, is a folder you can open.
 
 ---
 
@@ -36,7 +40,7 @@ Franz Boas set the rule for describing a language: not one book but three — a 
 
 [[lexicon]] is the dictionary — the words and the work they do, rendered live on the page they describe. Opened anywhere and browsed; you come holding a value, or a meaning.
 
-[[texts]] are the language spoken — the vocabulary composed into a whole page, every tag and block in use. You come holding a doubt, and read it in use.
+[[texts]] are the language spoken — the vocabulary composed into a whole page, every tag and block in use. Seen whole; you come holding a doubt, and watch it answered.
 
 A story, a catalogue, and the thing itself. Take whichever you came for.
 
@@ -46,7 +50,7 @@ A story, a catalogue, and the thing itself. Take whichever you came for.
 
 A small set of commitments. Not rules — conclusions arrived at.
 
-Some names mark what a thing is, others what it's for. They live on different layers, and the whole architecture is keeping those layers honest.
+Some names mark what a thing is, others what it's for. They live on different layers, and keeping those layers honest is the whole architecture.
 
 A layer earns its place only when it adds meaning the one beneath it lacks. A name that only renames is indirection wearing a layer's clothes.
 
