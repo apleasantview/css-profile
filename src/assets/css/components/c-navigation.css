@@ -16,6 +16,8 @@
   line-height: 0;
   display: flex;
   gap:var(--space-s);
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .c-navigation-switch {
