@@ -1,0 +1,15 @@
+---
+title: 'The element/block joint'
+slug: 'element-block-joint'
+lang: 'en'
+layout: 'base.njk'
+section: ['grammar']
+---
+
+<p>Where does a single element end and a composed block begin? The lazy answer is to count selectors &mdash; one tag is an element, several make a block. It breaks at once. Headings are six tags on a shared scale; code is <code>pre</code>, <code>code</code>, <code>kbd</code>, <code>samp</code> &mdash; plainly families, yet just as plainly elements, not blocks.</p>
+
+<p>The real joint is dependency. A <strong>block</strong> has proprietary parts &mdash; pieces with no life outside it. A table's <code>td</code>, a figure's <code>figcaption</code>, a <code>details</code>'s <code>summary</code>: none means anything alone; each exists only as part of its whole. An <strong>element</strong> is complete on its own, even inside a family. An <code>h2</code> is a finished thing; so is a <code>kbd</code>. They share a scale, but neither is a <em>part</em> of the other.</p>
+
+<p>So the test isn't how many selectors, it's whether the part can stand alone. If yes, you have a family of elements. If no &mdash; if the part only makes sense in the embrace of its parent &mdash; you have a block. That line is what sorts the base layer (every bare tag, each complete) from the blocks layer (the composed few: table, lists, details).</p>
+
+<p>It's the same boundary the whole system keeps drawing, one scale down: high cohesion inside, a clean edge around. A block is just an element whose parts agreed to belong to each other.</p>

@@ -1,0 +1,15 @@
+---
+title: 'Package vs presentation'
+slug: 'package-vs-presentation'
+lang: 'en'
+layout: 'base.njk'
+section: ['grammar']
+---
+
+<p>The folders split into two kinds, and the line between them is the most important one in the project. <code>profile/</code> is the <strong>package</strong>: the shared vocabulary &mdash; primitives, roles, themes, the accessibility floor. It's the noun, the API surface, the part that would ship if anything did. Everything else &mdash; <code>document/</code>, <code>components/</code>, the borrowed resets and vendors &mdash; is <strong>consumer code</strong>: verbs, spending the vocabulary, demonstrating what it builds.</p>
+
+<p>The proof is the dependency arrow, and it runs one way. Delete a consumer and the package still stands; delete the package and every consumer goes dark. <code>document/</code> reaches into <code>profile/</code> constantly; <code>profile/</code> never reaches back. That asymmetry <em>is</em> the boundary &mdash; not a rule imposed on the code, a fact about it.</p>
+
+<p>It's also the line between what's shipped and what's given away. Through <code>profile/</code> is the contract &mdash; the words, with public standing, the thing you'd build against. After it is opinion: one way to spend the vocabulary, mine, a worked example you'd delete and rewrite for your own site. The package is held to a higher standard because it's the part a reader installs against; the consumers can be looser, more authorial.</p>
+
+<p>Which is why <code>profile/</code> was finished and locked first, and the rest left freer. You polish the dictionary before the essays. One contract beneath; as many presentations over it as you care to write.</p>

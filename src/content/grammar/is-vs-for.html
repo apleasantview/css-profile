@@ -1,0 +1,17 @@
+---
+title: 'Is vs for'
+slug: 'is-vs-for'
+lang: 'en'
+layout: 'base.njk'
+section: ['grammar']
+---
+
+<p>A name records one of two things about a value: what it <strong>is</strong>, or what it's <strong>for</strong>. <code>blue-600</code> is a fact &mdash; a point on a ramp, with no opinion about where it's used. <code>accent</code> is a job &mdash; the colour that draws the eye. The first is a primitive; the second is a role. This single cut is the one the whole architecture rests on.</p>
+
+<p>They sit on different layers, and the gap between them is where the design lives. <code>--color-accent: var(--color-blue-600)</code> reads as a sentence: the value is blue-600, the job is accent. The primitive is the word; the role is the word pressed into service.</p>
+
+<p>Keep them apart because value and job change on different clocks. Rebrand blue to green and every primitive reference breaks &mdash; but every role holds, because a button that asked for <code>accent</code> never cared which blue answered. The role is a promise the value can keep with any ingredient.</p>
+
+<p>It's also why you can build the button and still not understand the system: the tutorial hands you <code>--color-primary</code> and never says it's a role, not a colour. Once said, the fog lifts. Some names are facts, others are jobs. Don't let a fact wear a job's name, or a job freeze into a fact.</p>
+
+<p>Every layer is one more turn of this screw &mdash; primitives name what is, semantics name what for, themes change the mapping by context, components speak only in roles and never reach for the raw words. Hold the line, and the rest falls out.</p>

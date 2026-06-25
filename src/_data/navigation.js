@@ -1,5 +1,15 @@
 export default [
-	{ label: 'grammar', url: '/grammar/' },
+	{
+		label: 'grammar',
+		url: '/grammar/',
+		children: [
+			{ label: 'is vs for', url: '/grammar/is-vs-for/' },
+			{ label: 'earn its place', url: '/grammar/earn-its-place/' },
+			{ label: 'element/block joint', url: '/grammar/element-block-joint/' },
+			{ label: 'package vs presentation', url: '/grammar/package-vs-presentation/' },
+			{ label: 'admitted, not assumed', url: '/grammar/admitted-not-assumed/' },
+		],
+	},
 	{
 		label: 'lexicon',
 		url: '/lexicon/',
