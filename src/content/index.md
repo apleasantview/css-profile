@@ -4,7 +4,6 @@ slug: 'home'
 description: 'An inquiry into the document''s identity — how a page presents itself, and the grammar of the CSS that decides it.'
 date: 2026-05-29
 permalink: '/'
-layout: 'base.njk'
 ---
 
 An inquiry into the document's identity — not what a page is, but how it comes to present itself.

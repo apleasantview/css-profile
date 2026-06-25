@@ -1,8 +1,6 @@
 ---
 title: 'Lexicon'
 slug: 'lexicon'
-lang: 'en'
-layout: 'base.njk'
 ---
 
 The words — the profile's vocabulary, read two ways: by the meaning you arrive holding, or seen raw as the values themselves.

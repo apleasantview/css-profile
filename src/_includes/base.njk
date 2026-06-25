@@ -14,6 +14,15 @@
         <h1>{{ title }}</h1>
         {{ content | safe }}
       </div>
+      <div class="wrapper">
+        {% if section and "/index." not in page.inputPath %}
+          <p>
+            <a href="/{{ section | join('/') }}/" style="display: block; line-height: 1.2; vertical-align: middle; text-underline-offset: 0.4em; margin-block: var(--space-m);">
+              <span>&#8592;</span>&nbsp;Back to {{ section | safe | title }}
+            </a>
+          </p>
+        {% endif %}
+      </div>
     </main>
 
     <footer>

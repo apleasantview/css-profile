@@ -1,5 +1,9 @@
 export default [
 	{
+		label: 'orientation',
+		url: '/orientation/',
+	},
+	{
 		label: 'grammar',
 		url: '/grammar/',
 		children: [

@@ -21,6 +21,7 @@
 @import './document/layout/wrapper.css';
 @import './document/utils/flow.css';
 @import './document/utils/label.css';
+@import './document/utils/card.css';
 
 /* 04. Components — shared UI (built from the vocabulary) */
 @import './components/c-navigation.css';

@@ -1,8 +1,6 @@
 ---
 title: 'Texts'
 slug: 'texts'
-lang: 'en'
-layout: 'base.njk'
 ---
 
 The language spoken — the vocabulary composed into a whole page, every bare tag and block in use. Here you read the grammar working rather than described.

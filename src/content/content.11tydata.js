@@ -1,4 +1,7 @@
 export default {
+	lang: 'en',
+	layout: 'base.njk',
+
 	// permalink (covered below)
 	permalink: function (data) {
 		const { slug, page, section } = data;
