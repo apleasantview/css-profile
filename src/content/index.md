@@ -71,7 +71,9 @@ The thinking here was borrowed, not invented. The work was to name what was alre
 
 On the architecture itself — the layered cascade of ITCSS, the naming of BEM and its BEMIT extension, the tiered design tokens that Brad Frost and the W3C drafts set down. The role-per-step scale is Radix's; the prose rhythm is Every Layout's. A coherent slice of CSS for one presentation is, in the W3C's own term, a *profile*.
 
-On the deeper pattern — that the layering is really encapsulation: a boundary, high cohesion within it, a contract across it. David Parnas named it for software in 1972; Christopher Alexander found the same shape across buildings and towns; Plato called it carving nature at its joints. The grammar of CSS turns out to be a dialect of an older grammar of boundaries.
+On the deeper pattern — that the layering is really encapsulation: a boundary. David Parnas named it for software in 1972; Christopher Alexander found the same shape across buildings and towns; Plato called it carving nature at its joints.
+
+The grammar of CSS turns out to be a dialect of an older grammar of boundaries.
 
 [`document`](https://apv-document.netlify.app/) — asks what a web page *is* in essence: what's left when everything accumulated is laid bare.
 
@@ -83,7 +85,9 @@ Set in the system serif. Nothing fetched from anywhere.
 
 Built with vanilla CSS and custom properties. No framework, no methodology imported wholesale — the cascade is the mechanism.
 
-This isn't a stylesheet you drop in to make a bare page look considered without effort. It starts from what the layers are and lets the structure fall out. The overlap is the surface.
+This isn't a stylesheet you drop in to make a bare page look considered without effort. It starts from what the layers are and lets the structure fall out.
+
+The overlap is the surface.
 
 With thanks to Harry Roberts, Stuart Robson, Brad Frost, the Radix team, and the W3C design-tokens group — for the work this rests on. And to everyone whose grammar this only writes down.
 
