@@ -1,12 +1,20 @@
-.card,
+.card {
+  position: relative;
+	width: 100%;
+  padding-block: var(--space-inset-m);
+  padding-inline: var(--space-inset-m);
+  border: var(--border-width-default) solid var(--color-border);
+  border-radius: var(--border-radius-card);
+}
+
 .card--link {
   position: relative;
   display: inline-flex;
   flex-direction: column;
   gap: var(--flow-space-m);
 	width: 100%;
-  padding-block: var(--space-inset-xs);
-  padding-inline: var(--space-inset-l);
+  padding-block: var(--space-inset-m);
+  padding-inline: var(--space-inset-m);
   border: var(--border-width-default) solid var(--color-border);
   border-radius: var(--border-radius-card);
 }
@@ -18,8 +26,12 @@ ul:has(.card--link) {
 	padding: 0;
 	list-style: none;
 
+	& .card {
+		margin-block: var(--space-s);
+	}
+
 	& .card--link {
-		margin-block: var(--space-xs);
+		margin-block: var(--space-s);
 	}
 }
 
