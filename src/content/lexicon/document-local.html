@@ -1,0 +1,25 @@
+---
+title: 'Document-local'
+slug: 'document-local'
+---
+
+{% include "partials/vocab-styles.njk" %}
+
+<p>This presentation's own additions (<code>document/tokens.css</code>), not the shared profile — the words a single consumer adds for itself.</p>
+
+<table class="vocab-table">
+  <thead>
+    <tr>
+      <th scope="col">token</th>
+      <th scope="col">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for role in vocabulary.documentLocal %}
+    <tr>
+      <td{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</td>
+      <td>{{ role.for }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

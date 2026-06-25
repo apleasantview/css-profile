@@ -22,5 +22,20 @@ export default {
 
 		// Leading slash anchors to the site root; trailing slash is the project convention.
 		return '/' + parts.join('/') + '/';
+	},
+
+	// Within-section prev/next, derived from navigation.js — the single source of
+	// order, so the links can't drift. Find this page among a section's children
+	// and hand back its neighbours; pages outside the nav (home, landings) get null.
+	eleventyComputed: {
+		pageNav: (data) => {
+			const url = data.page.url;
+			for (const item of data.navigation ?? []) {
+				const kids = item.children ?? [];
+				const i = kids.findIndex((c) => c.url === url);
+				if (i !== -1) return { prev: kids[i - 1] ?? null, next: kids[i + 1] ?? null };
+			}
+			return null;
+		}
 	}
 };

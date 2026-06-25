@@ -1,0 +1,28 @@
+---
+title: 'Coda — Reach for the primitive'
+slug: 'coda'
+---
+
+{% include "partials/vocab-styles.njk" %}
+
+<p>No role by design — the keyword is already the vocabulary, or it's a named edge.</p>
+
+{% for group in vocabulary.reachGroups %}
+<h3>{{ group.title }}</h3>
+<table class="vocab-table">
+  <thead>
+    <tr>
+      <th scope="col">token</th>
+      <th scope="col">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for role in group.roles %}
+    <tr>
+      <td{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</td>
+      <td>{{ role.for }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endfor %}

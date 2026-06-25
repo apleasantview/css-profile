@@ -20,6 +20,8 @@ export default [
 		children: [
 			{ label: 'vocabulary', url: '/lexicon/vocabulary/' },
 			{ label: 'raw', url: '/lexicon/profile-test/' },
+			{ label: 'coda', url: '/lexicon/coda/' },
+			{ label: 'document-local', url: '/lexicon/document-local/' },
 		],
 	},
 	{

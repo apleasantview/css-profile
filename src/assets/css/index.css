@@ -26,6 +26,7 @@
 /* 04. Components — shared UI (built from the vocabulary) */
 @import './components/c-navigation.css';
 @import './components/c-breadcrumbs.css';
+@import './components/c-page-navigation.css';
 @import './components/c-footer.css';
 
 /* 05. Vendors — third-party CSS, dropped in as-is (no assembler). Last by

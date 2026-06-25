@@ -9,20 +9,7 @@ slug: 'vocabulary'
 <p>The authoring menu: every role you can reach for, by job, one line of what it's for. This is the <strong>lexicon</strong> — the names and their meaning.</p>
 <hr>
 
-<!--
-  Specimen-layout styles, page-local: a harness concern, not part of profile/ or document/.
-  They consume the vocabulary's own tokens on purpose — the menu eats its own cooking.
--->
-<style>
-  .vocab-table td.is-missing {
-    color: var(--color-danger-text);
-    text-decoration: line-through dotted;
-  }
-  .vocab-note {
-    color: var(--color-text-muted);
-    font-style: italic;
-  }
-</style>
+{% include "partials/vocab-styles.njk" %}
 
 <section class="flow" aria-labelledby="primitives">
   <h2 id="primitives">Primitives</h2>
@@ -82,55 +69,6 @@ slug: 'vocabulary'
     </table>
   </details>
   {% endfor %}
-</section>
-
-<hr>
-
-<section class="flow" aria-labelledby="reach-for-the-primitive">
-  <h2 id="reach-for-the-primitive">Reach for the primitive</h2>
-  <p class="vocab-note">No role by design — the keyword is already the vocabulary, or it's a named edge.</p>
-  {% for group in vocabulary.reachGroups %}
-  <h3>{{ group.title }}</h3>
-  <table class="vocab-table">
-    <thead>
-      <tr>
-        <th scope="col">token</th>
-        <th scope="col">description</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for role in group.roles %}
-      <tr>
-        <td{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</td>
-        <td>{{ role.for }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  {% endfor %}
-</section>
-
-<hr>
-
-<section class="flow" aria-labelledby="document-local">
-  <h2 id="document-local">Document-local</h2>
-  <p class="vocab-note">This presentation's own additions (<code>document/tokens.css</code>), not the shared profile.</p>
-  <table class="vocab-table">
-    <thead>
-      <tr>
-        <th scope="col">token</th>
-        <th scope="col">description</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for role in vocabulary.documentLocal %}
-      <tr>
-        <td{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</td>
-        <td>{{ role.for }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
 </section>
 
 {% if vocabulary.undocumented.length %}
