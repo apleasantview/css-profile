@@ -1,5 +1,5 @@
 .page {
 	display: block;
-	padding-top: var(--space-m);
+	padding-top: var(--space-s);
 	margin-top: var(--space-s);
 }
