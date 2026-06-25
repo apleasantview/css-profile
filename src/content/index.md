@@ -72,9 +72,9 @@ On the architecture itself — the layered cascade of ITCSS, the naming of BEM a
 
 On the deeper pattern — that the layering is really encapsulation: a boundary, high cohesion within it, a contract across it. David Parnas named it for software in 1972; Christopher Alexander found the same shape across buildings and towns; Plato called it carving nature at its joints. The grammar of CSS turns out to be a dialect of an older grammar of boundaries.
 
-[`document`](https://www.apleasantview.com/document) — asks what a web page *is* in essence: what's left when everything accumulated is laid bare.
+[`document`](https://apv-document.netlify.app/) — asks what a web page *is* in essence: what's left when everything accumulated is laid bare.
 
-[`a pleasant view`](https://www.apleasantview.com) — the practice this is written from. Local, simple, dependable.
+[`a pleasant view`](https://www.apleasantview.com/) — the practice this is written from. Local, simple, dependable.
 
 ## Colophon
 
