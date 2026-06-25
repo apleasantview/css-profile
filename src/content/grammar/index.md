@@ -7,7 +7,7 @@ layout: 'base.njk'
 
 The rules. How the vocabulary holds together — read once, in order. You arrive holding a question.
 
-One distinction carries most of it: some names say what a thing **is** (`blue-500`), others say what it's **for** (`primary`). Keep those on separate layers, keep the layers honest, and the rest falls out.
+One distinction carries most of it: some names say what a thing **is** (`blue-600`), others say what it's **for** (`accent`). Keep those on separate layers, keep the layers honest, and the rest falls out.
 
 The principles, each one idea:
 

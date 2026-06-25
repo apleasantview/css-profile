@@ -5,12 +5,12 @@ export default [
 		url: '/lexicon/',
 		children: [
 			{ label: 'vocabulary', url: '/lexicon/vocabulary/' },
-			{ label: 'profile-test', url: '/lexicon/profile-test/' },
+			{ label: 'profile', url: '/lexicon/profile-test/' },
 		],
 	},
 	{
 		label: 'texts',
 		url: '/texts/',
-		children: [{ label: 'document-test', url: '/texts/document-test/' }],
+		children: [{ label: 'document', url: '/texts/document-test/' }],
 	},
 ];

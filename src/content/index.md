@@ -37,7 +37,7 @@ Franz Boas set the rule for describing a language: not one book but three — a 
 
 [[lexicon]] is the dictionary — the words and the work they do, rendered live on the page they describe. Opened anywhere and browsed; you come holding a value, or a meaning.
 
-The texts are the language spoken — [[profile-test]] shows the vocabulary raw, [[document-test]] shows it composed into a page. You come holding a doubt, and read it in use.
+[[texts]] are the language spoken — the vocabulary composed into a whole page, every tag and block in use. You come holding a doubt, and read it in use.
 
 A story, a catalogue, and the thing itself. Take whichever you came for.
 
