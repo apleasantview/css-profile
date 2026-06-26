@@ -18,10 +18,10 @@ export default [
 		label: 'lexicon',
 		url: '/lexicon/',
 		children: [
-			{ label: 'vocabulary', url: '/lexicon/vocabulary/' },
-			{ label: 'raw', url: '/lexicon/profile-test/' },
-			{ label: 'coda', url: '/lexicon/coda/' },
-			{ label: 'document-local', url: '/lexicon/document-local/' },
+			{ label: 'Vocabulary', url: '/lexicon/vocabulary/' },
+			{ label: 'Raw profile', url: '/lexicon/profile-test/' },
+			{ label: 'Coda', url: '/lexicon/coda/' },
+			{ label: 'Document-local', url: '/lexicon/document-local/' },
 		],
 	},
 	{
