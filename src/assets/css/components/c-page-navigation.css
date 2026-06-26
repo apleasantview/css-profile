@@ -1,19 +1,17 @@
-.c-page-navigation {
-	padding-block: var(--space-s);
-}
 .c-page-navigation__inner {
-  display: flex;
-  gap: var(--space-m);
-  margin-block: var(--space-l);
+	margin-block: var(--space-l);
+	display: flex;
+	justify-content: space-between;
+	gap: var(--space-m);
 }
 
 .c-page-navigation--prev,
 .c-page-navigation--next {
+	max-width: fit-content;
 	text-underline-offset: 0.42em;
-	line-height: 1.2;
-	vertical-align: middle;
 }
 
 .c-page-navigation--next {
 	margin-left: auto;
+	text-align: right;
 }
