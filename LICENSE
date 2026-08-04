@@ -1,0 +1,33 @@
+CSS Profile
+Copyright (c) 2026 Cristovao Verstraeten / a pleasant view
+
+This work is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made.
+
+  Licence deed  https://creativecommons.org/licenses/by/4.0/
+  Legal code    https://creativecommons.org/licenses/by/4.0/legalcode
+
+
+WHAT THIS COVERS
+
+  The stylesheets in src/assets/css/, the templates and data files, and the
+  writing throughout the site.
+
+
+WHAT THIS DOES NOT COVER
+
+  The colour ramps in profile/primitives/colors.css are Tailwind CSS v4's
+  neutral, blue, green, amber and red scales, recorded as published. Tailwind
+  is MIT licensed, Copyright (c) Tailwind Labs, Inc.
+
+  The semantic colour families follow Radix Colors' twelve-step scheme, named
+  rather than numbered. The scheme is the idea, not the values; Radix is MIT
+  licensed, Copyright (c) WorkOS.
+
+  resets/modern-reset.css is adapted from Andy Bell's "A more modern CSS reset"
+  and Josh W. Comeau's "custom CSS reset", both published openly and credited
+  in the file itself.
