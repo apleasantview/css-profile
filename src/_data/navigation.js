@@ -18,7 +18,8 @@ export default [
 		label: 'lexicon',
 		url: '/lexicon/',
 		children: [
-			{ label: 'Vocabulary', url: '/lexicon/vocabulary/' },
+			{ label: 'Primitives', url: '/lexicon/primitives/' },
+			{ label: 'Semantics', url: '/lexicon/semantics/' },
 			{ label: 'Raw profile', url: '/lexicon/profile-test/' },
 			{ label: 'Coda', url: '/lexicon/coda/' },
 			{ label: 'Document-local', url: '/lexicon/document-local/' },

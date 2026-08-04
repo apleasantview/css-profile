@@ -1,0 +1,70 @@
+---
+title: 'Semantics'
+slug: 'semantics'
+---
+
+<aside>
+  <p style="font-size: var(--text-size-secondary)"><em>The role names are read straight from the stylesheet; the meanings are hand-kept. Anything declared in the CSS with no meaning is listed at the bottom.</em></p>
+</aside>
+<p>
+  The authoring menu: every role you can reach for, grouped by the job it does, one line of what it
+  is for. This is the half a stylesheet cannot tell you, which is why it is written by hand and
+  checked against the other half in <a href="/lexicon/primitives/">Primitives</a>.
+</p>
+<p>
+  Each role maps a meaning onto a value, and the mapping is what moves. Light is the base; dark, more
+  contrast, and the palette an operating system forces re-point these same names. Four realities, one
+  contract, no new mechanism for any of them.
+</p>
+<hr>
+
+{% include "partials/vocab-styles.njk" %}
+
+<section class="flow" aria-labelledby="semantics">
+  <h2 id="semantics">Semantics</h2>
+  <p class="vocab-note">The named jobs. Each maps a meaning onto a primitive, so the value can shift without the name moving.</p>
+  {% for group in vocabulary.semanticsGroups %}
+  <details name="semantic-group">
+    <summary>
+      <h3 id="{{ group.title | slugify }}">{{ group.title }}</h3>
+    </summary>
+    {% if group.note %}<p class="vocab-note">{{ group.note }}</p>{% endif %}
+    <div class="overflow-x">
+      <table class="vocab-table">
+        <thead>
+          <tr>
+            <th scope="col">token</th>
+            {% if group.hasSwatch %}<th scope="col" class="vocab-table__swatch"><span class="sr-only">swatch</span></th>{% endif %}
+            <th scope="col">description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for role in group.roles %}
+          <tr>
+            <td{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</td>
+            {% if group.hasSwatch %}<td class="vocab-table__swatch">{% if role.swatch %}<span class="vocab-swatch"><span class="vocab-swatch__fill" style="background: var({{ role.name }})"></span></span>{% endif %}</td>{% endif %}
+            <td>{{ role.for }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </details>
+  {% endfor %}
+</section>
+
+{% if vocabulary.undocumented.length %}
+<hr>
+<section class="flow" aria-labelledby="undocumented">
+  <h2 id="undocumented">Undocumented roles</h2>
+  <p class="vocab-note">
+    These roles are declared in <code>profile/semantic/</code> but have no entry above. The menu has
+    drifted from the stylesheet — give each one a line.
+  </p>
+  <ul>
+    {% for name in vocabulary.undocumented %}
+    <li><code>{{ name }}</code></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
