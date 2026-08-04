@@ -11,7 +11,7 @@
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  gap: var(--flow-space-m);
+  gap: var(--flow-space-2xs);
 	width: 100%;
   padding-block: var(--space-inset-m);
   padding-inline: var(--space-inset-m);

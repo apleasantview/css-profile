@@ -7,6 +7,6 @@ The language spoken — the vocabulary composed into a whole page, every bare ta
 
 <div style="margin-block: var(--space-m);">
 
-- [[document-test]] — bare tags and composed blocks, walked in the order the CSS declares them. {.card--link}
+- <span class="label">Read</span> [[document-test]] — bare tags and composed blocks, walked in the order the CSS declares them. {.card--link}
 
 </div>

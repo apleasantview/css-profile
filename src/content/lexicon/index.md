@@ -7,10 +7,10 @@ The words — the profile's vocabulary. Read it by the meaning you arrive holdin
 
 <div style="margin-block: var(--space-m)">
 
-- [[vocabulary]] — the authoring menu: every role, grouped by job, one line of what it's for. {.card--link}
-- [[profile-test]] — the vocabulary as the values themselves, before any presentation dresses it. {.card--link}
-- [[coda]] — the keywords that take no role are already in the vocabulary, or a named edge. {.card--link}
-- [[document-local]] — tokens one presentation adds for itself, not the shared profile. {.card--link}
+- <span class="label">Read</span> [[vocabulary]] — the authoring menu: every role, grouped by job, one line of what it's for. {.card--link}
+- <span class="label">Read</span> [[profile-test]] — the vocabulary as the values themselves, before any presentation dresses it. {.card--link}
+- <span class="label">Read</span> [[coda]] — the keywords that take no role are already in the vocabulary, or a named edge. {.card--link}
+- <span class="label">Read</span> [[document-local]] — tokens one presentation adds for itself, not the shared profile. {.card--link}
 
 </div>
 

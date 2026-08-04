@@ -9,11 +9,11 @@ Start with [[orientation]] — the cascade laid out as the folder it is, each la
 
 <div style="margin-block: var(--space-s);">
 
-- [[is-vs-for]] — the single cut the whole architecture rests on. {.card--link}
-- [[earn-its-place]] — a layer is worth keeping only when it adds meaning the one below it lacks. {.card--link}
-- [[element-block-joint]] — a block is an element with proprietary parts; an element stands alone. {.card--link}
-- [[package-vs-presentation]] — what ships, and what merely spends it. {.card--link}
-- [[admitted-not-assumed]] — borrowed code gets the last word in its own scope, never the foundation's. {.card--link}
+- <span class="label">Read</span> [[is-vs-for]] — the single cut the whole architecture rests on. {.card--link}
+- <span class="label">Read</span> [[earn-its-place]] — a layer is worth keeping only when it adds meaning the one below it lacks. {.card--link}
+- <span class="label">Read</span> [[element-block-joint]] — a block is an element with proprietary parts; an element stands alone. {.card--link}
+- <span class="label">Read</span> [[package-vs-presentation]] — what ships, and what merely spends it. {.card--link}
+- <span class="label">Read</span> [[admitted-not-assumed]] — borrowed code gets the last word in its own scope, never the foundation's. {.card--link}
 
 </div>
 

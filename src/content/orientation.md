@@ -50,7 +50,7 @@ The dependency arrow runs one way — consumers reach into the package, the pack
 - **`resets/`** — brackets the front: normalised browser defaults, borrowed and [[admitted-not-assumed]] like vendors — the floor the authored CSS sits on. {.card}
 - **`document/`** — the presentation. One site's way of spending that vocabulary: base styles, blocks, layout, the dressing seam in `tokens.css`. A worked example — mine — that you'd delete and rewrite for your own. {.card}
 - **`components/`** — shared UI, built from the vocabulary: navigation, breadcrumbs, footer. Consumer code like `document/`, but reusable chrome rather than one page's presentation. {.card}
-- **`vendors/`** — third-party CSS, admitted as-is. Last in the cascade by design: an enhancement nothing depends on, so it can never quietly become load-bearing. Reserved and presently empty, which is the point — a place kept for the borrowed without letting it set the terms. {.card}
+- **`vendors/`** — third-party CSS, admitted as-is. Last in the cascade by design: an enhancement nothing depends on, so it can never quietly become load-bearing. {.card}
 
 </div>
 
