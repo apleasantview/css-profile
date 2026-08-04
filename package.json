@@ -8,7 +8,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "rimraf dist/ && npx @11ty/eleventy --serve",
-    "build": "rimraf dist/ && cross-env ELEVENTY_ENV=production npx @11ty/eleventy"
+    "build": "rimraf dist/ && cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "audit": "node audit.js"
   },
   "author": "Cristovao Verstraeten",
   "license": "CC-BY-4.0",
