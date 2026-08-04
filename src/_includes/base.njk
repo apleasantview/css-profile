@@ -25,28 +25,8 @@
       </div>
     </footer>
 
-    <script>
-      /* Theme switch: cycles system -> light -> dark, reading the same
-       * data-theme contract the CSS reads. system means follow the OS. */
-      (function () {
-        var btn = document.querySelector('[data-theme-toggle]');
-        if (!btn) return;
-        var modes = ['system', 'light', 'dark'];
-        var current = function () { return localStorage.getItem('theme') || 'system'; };
-        var paint = function () { btn.textContent = 'theme — ' + current(); };
-        btn.addEventListener('click', function () {
-          var next = modes[(modes.indexOf(current()) + 1) % modes.length];
-          if (next === 'system') {
-            delete document.documentElement.dataset.theme;
-            localStorage.removeItem('theme');
-          } else {
-            document.documentElement.dataset.theme = next;
-            localStorage.setItem('theme', next);
-          }
-          paint();
-        });
-        paint();
-      })();
-    </script>
+    {# The theme switch. The pre-paint restore is separate, and inline in
+       <head>, so the attribute lands before the body renders. #}
+    <script src="/assets/js/index.js" defer></script>
   </body>
 </html>
