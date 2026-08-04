@@ -35,6 +35,11 @@
 
 	--color-accent-text: var(--color-blue-700); /* 11 accent-coloured text */
 
+	/* Link color roles */
+	--color-link-hover: var(--color-text-muted);
+	--color-link-visited: var(--color-text-muted);
+	--color-link: var(--color-text);
+
 	/* Status families. Convention (hue → meaning) over the green/amber/red/blue
 	 * lexicon, same shape as accent (surface, border, text, solid, on-solid).
 	 * Never the sole signal; pair with an icon or word. */

@@ -86,19 +86,20 @@ sub {
 
 /* Links */
 a {
-	color: var(--color-text);
+	color: var(--color-link);
 	text-decoration: underline;
 	text-decoration-color: currentColor;
 	text-decoration-thickness: var(--link-underline-thickness);
 	text-underline-offset: var(--link-underline-offset);
-	transition:
-		color 0.15s ease-out,
-		text-decoration-color 0.15s ease-out;
 }
 
 a:hover {
-	color: var(--color-solid-hover);
+	color: var(--color-link-hover);
 	text-decoration-color: currentColor;
+}
+
+a:visited {
+	color: var(--color-link-visited);
 }
 
 /* Blockquote */

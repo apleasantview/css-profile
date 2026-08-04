@@ -43,6 +43,8 @@
 
 		--color-accent-text: LinkText;
 
+		--color-link-visited: VisitedText;
+
 		/* Status families collapse: the OS palette has no "success" colour, so
 		 * here the meaning must travel by icon/word, never the colour alone. */
 		--color-success-surface: Canvas;
