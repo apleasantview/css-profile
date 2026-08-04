@@ -8,5 +8,6 @@ The language spoken — the vocabulary composed into a whole page, every bare ta
 <div style="margin-block: var(--space-m);">
 
 - <span class="label">Read</span> [[document-test]] — bare tags and composed blocks, walked in the order the CSS declares them. {.card--link}
+- <span class="label">Read</span> [[controls-test]] — every form element, and the layer that has not been written yet. {.card--link}
 
 </div>

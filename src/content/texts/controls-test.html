@@ -1,0 +1,168 @@
+---
+title: 'Controls'
+slug: 'controls-test'
+---
+
+<p>
+  Every form element the document can hold, walked in the order a stylesheet would meet them.
+  Nothing here carries a class: a <code>&lt;button&gt;</code> is a button, because a form control is
+  the one element whose appearance is the whole point of it.
+</p>
+<p>
+  This page is a specimen and, at the moment, an indictment. <code>resets/forms.css</code> strips
+  every control back to nothing — <code>appearance: none</code>, no border, no background, no
+  padding — and no consumer puts anything back. The reset is half a duty performed. What you see
+  below is the floor, not the finish, and the gap is the point of showing it.
+</p>
+<p>
+  See <a href="/grammar/package-vs-presentation/">package versus presentation</a>: the profile can
+  hold the vocabulary a control needs without deciding how one looks, but somebody has to decide, and
+  right now nobody has.
+</p>
+<hr>
+
+{#
+  Specimen-layout styles, page-local: a harness concern, not part of profile/ or
+  document/. They spend the vocabulary's own spacing roles on purpose.
+#}
+<style>
+  .ctl-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-gap-s);
+    margin-block: var(--space-s);
+  }
+  .ctl-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--space-gap-xs);
+    margin-block: var(--space-s);
+  }
+  /* An outline so an invisible control still has a findable edge while the
+     restore layer is missing. Delete this when there is one. */
+  .ctl-ghost {
+    outline: 1px dashed var(--color-border);
+    outline-offset: var(--space-gap-xs);
+  }
+</style>
+
+<section class="flow" aria-labelledby="buttons">
+  <h2 id="buttons">Buttons</h2>
+  <p>
+    Four elements that mean "press me", three of them <code>input</code> in disguise. They should be
+    indistinguishable; after the reset they are, because they are all nothing.
+  </p>
+  <div class="ctl-row ctl-ghost">
+    <button type="button">Button</button>
+    <input type="button" value="Input button">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <button type="button" disabled>Disabled</button>
+  </div>
+  <p>
+    The disabled one is the only state the reset does dress: <code>opacity: 0.5</code> and
+    <code>cursor: not-allowed</code>. A reset making an aesthetic decision is worth noticing.
+  </p>
+</section>
+
+<hr>
+
+<section class="flow" aria-labelledby="text-entry">
+  <h2 id="text-entry">Text entry</h2>
+  <p>
+    The editable well. A field is not a surface: a surface is what a control is made of, a field is
+    what you type into, and the profile has roles for neither yet.
+  </p>
+  <div class="ctl-stack ctl-ghost">
+    <label for="ctl-text">Text</label>
+    <input type="text" id="ctl-text" placeholder="Placeholder text">
+
+    <label for="ctl-email">Email</label>
+    <input type="email" id="ctl-email" value="cristovao@apleasantview.com">
+
+    <label for="ctl-search">Search</label>
+    <input type="search" id="ctl-search" placeholder="Search">
+
+    <label for="ctl-number">Number</label>
+    <input type="number" id="ctl-number" value="23">
+
+    <label for="ctl-textarea">Textarea</label>
+    <textarea id="ctl-textarea" rows="3">Multiple lines, and a resize handle the reset leaves alone.</textarea>
+
+    <label for="ctl-disabled">Disabled</label>
+    <input type="text" id="ctl-disabled" value="Not editable" disabled>
+  </div>
+  <p>
+    <code>::placeholder</code> is set to <code>currentColor</code> at full opacity, which makes
+    placeholder text identical to entered text. That is a legibility problem, not a style choice: the
+    reader cannot tell what they have typed from what they have not.
+  </p>
+</section>
+
+<hr>
+
+<section class="flow" aria-labelledby="choice">
+  <h2 id="choice">Choice</h2>
+  <p>
+    Checkboxes and radios keep their native appearance, because <code>appearance: none</code> on a
+    checkbox with nothing drawn in its place removes the control entirely rather than restyling it.
+  </p>
+  <fieldset>
+    <legend>Checkboxes</legend>
+    <div class="ctl-stack">
+      <span><input type="checkbox" id="ctl-check-1" checked> <label for="ctl-check-1">Checked</label></span>
+      <span><input type="checkbox" id="ctl-check-2"> <label for="ctl-check-2">Unchecked</label></span>
+      <span><input type="checkbox" id="ctl-check-3" disabled> <label for="ctl-check-3">Disabled</label></span>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Radios</legend>
+    <div class="ctl-stack">
+      <span><input type="radio" name="ctl-radio" id="ctl-radio-1" checked> <label for="ctl-radio-1">First</label></span>
+      <span><input type="radio" name="ctl-radio" id="ctl-radio-2"> <label for="ctl-radio-2">Second</label></span>
+    </div>
+  </fieldset>
+  <p>
+    <code>fieldset</code> and <code>legend</code> are reset to nothing as well, so the grouping above
+    is announced to a screen reader and invisible to everyone else. The semantics survive the reset;
+    the presentation does not.
+  </p>
+</section>
+
+<hr>
+
+<section class="flow" aria-labelledby="select">
+  <h2 id="select">Select</h2>
+  <p>
+    The one control the reset cannot fully strip. <code>appearance: none</code> removes the arrow,
+    but the popup list stays native and unstyleable, which is the standing argument for leaving a
+    select alone until you have something better to draw.
+  </p>
+  <div class="ctl-row ctl-ghost">
+    <select aria-label="Single select">
+      <option>First option</option>
+      <option selected>Second option</option>
+      <option>Third option</option>
+    </select>
+    <select aria-label="Disabled select" disabled>
+      <option>Unavailable</option>
+    </select>
+  </div>
+</section>
+
+<hr>
+
+<section class="flow" aria-labelledby="focus">
+  <h2 id="focus">Focus</h2>
+  <p>
+    Tab through this page. The focus ring is the one part of a control the profile does dress, and it
+    is the reason the page is operable at all while the rest is missing — every control above can be
+    reached and used by keyboard even where nothing is drawn.
+  </p>
+  <p>
+    That is the accessibility floor doing its job, and it is also the clearest argument for finishing
+    the layer: a control that works and cannot be seen is only half a control.
+  </p>
+</section>
