@@ -25,6 +25,7 @@ slug: 'vocabulary'
         <thead>
           <tr>
             <th scope="col">token</th>
+            {% if group.hasSwatch %}<th scope="col" class="vocab-table__swatch"><span class="sr-only">swatch</span></th>{% endif %}
             <th scope="col">description</th>
           </tr>
         </thead>
@@ -32,6 +33,7 @@ slug: 'vocabulary'
           {% for role in group.roles %}
           <tr>
             <td{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</td>
+            {% if group.hasSwatch %}<td class="vocab-table__swatch">{% if role.swatch %}<span class="vocab-swatch"><span class="vocab-swatch__fill" style="background: var({{ role.name }})"></span></span>{% endif %}</td>{% endif %}
             <td>{{ role.for }}</td>
           </tr>
           {% endfor %}
@@ -58,6 +60,7 @@ slug: 'vocabulary'
         <thead>
           <tr>
             <th scope="col">token</th>
+            {% if group.hasSwatch %}<th scope="col" class="vocab-table__swatch"><span class="sr-only">swatch</span></th>{% endif %}
             <th scope="col">description</th>
           </tr>
         </thead>
@@ -65,6 +68,7 @@ slug: 'vocabulary'
           {% for role in group.roles %}
           <tr>
             <td{% if not role.exists %} class="is-missing" title="not found in the CSS"{% endif %}>{{ role.name }}</td>
+            {% if group.hasSwatch %}<td class="vocab-table__swatch">{% if role.swatch %}<span class="vocab-swatch"><span class="vocab-swatch__fill" style="background: var({{ role.name }})"></span></span>{% endif %}</td>{% endif %}
             <td>{{ role.for }}</td>
           </tr>
           {% endfor %}
