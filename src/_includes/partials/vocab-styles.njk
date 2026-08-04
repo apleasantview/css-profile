@@ -1,12 +1,44 @@
-<!--
+{#
   Specimen-layout styles, shared by the lexicon's vocabulary pages: a harness
   concern, not part of profile/ or document/. They consume the vocabulary's own
   tokens on purpose — the menu eats its own cooking.
--->
+#}
 <style>
   .vocab-table td.is-missing {
     color: var(--color-danger-text);
     text-decoration: line-through dotted;
+  }
+
+  /* Swatches. A visual lookup aid, not a specimen: small enough to scan a
+     column against, and painted with var() so they follow the theme switch
+     like everything else on the page. */
+  .vocab-swatch {
+    display: block;
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    border: var(--border-width-default) solid var(--color-border);
+    /* Checkerboard behind the value, so `transparent` reads as a deliberate
+       absence rather than a broken cell. */
+    background-image: repeating-conic-gradient(
+      var(--color-background) 0% 25%,
+      var(--color-background-subtle) 0% 50%
+    );
+    background-size: 8px 8px;
+    margin-inline: auto;
+  }
+
+  /* The value goes on an inner element, because setting `background` inline on
+     the swatch itself would wipe the checkerboard underneath. */
+  .vocab-swatch__fill {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  .vocab-table th.vocab-table__swatch,
+  .vocab-table td.vocab-table__swatch {
+    inline-size: 3rem;
+    vertical-align: middle;
   }
   .vocab-note {
     color: var(--color-text-muted);

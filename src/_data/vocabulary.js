@@ -194,9 +194,24 @@ const documentLocal = [
 	['--wrapper-padding-inline', 'wrapper inline padding'],
 ];
 
+/* Which rows can show a swatch. Only colour can: everything else in this
+ * vocabulary is a length, a family or a weight, and a coloured square would say
+ * nothing true about it. `-color$` catches the roles named for their job rather
+ * than their kind, like --focus-ring-color. */
+const swatchKind = (name) => (/^--color-/.test(name) || /-color$/.test(name) ? 'fill' : null);
+
 /* Shape a [name, for] list into rows, checking each name resolves in the CSS. */
 const rows = (pairs) =>
-	pairs.map(([name, why]) => ({ name, for: why, exists: allNames.has(name) }));
+	pairs.map(([name, why]) => ({
+		name,
+		for: why,
+		exists: allNames.has(name),
+		swatch: swatchKind(name)
+	}));
+
+/* A group carries the flag so the template can drop the whole column rather
+ * than render a row of empty cells in the groups that have nothing to show. */
+const withSwatchFlag = (group) => ({ ...group, hasSwatch: group.roles.some((r) => r.swatch) });
 
 /* Colour splits into its natural ramps (black & white fold into neutral); the
  * other primitive files stay whole. */
@@ -243,9 +258,9 @@ const documented = new Set(
 const undocumented = [...roleNames].filter((n) => !documented.has(n)).sort();
 
 export default {
-	primitiveGroups,
-	semanticsGroups,
-	reachGroups,
+	primitiveGroups: primitiveGroups.map(withSwatchFlag),
+	semanticsGroups: semanticsGroups.map(withSwatchFlag),
+	reachGroups: reachGroups.map(withSwatchFlag),
 	documentLocal: documentLocalRows,
 	undocumented,
 	roleCount: roleNames.size,
